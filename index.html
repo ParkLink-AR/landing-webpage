@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ParkLink — Plataforma de reservas de estacionamiento urbano. En desarrollo.">
+    <title>ParkLink — La forma inteligente de estacionar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Topbar -->
+<div class="topbar">
+    <strong>ParkLink</strong> &nbsp;·&nbsp; MVP en desarrollo activo &nbsp;·&nbsp; Lanzamiento previsto 2026
+</div>
+
+<!-- NAV: icono recortado (solo el símbolo P) + wordmark de texto (solo las letras) -->
+<nav>
+    <a href="#" class="nav-brand">
+        <div class="brand-mark">
+            <img src="logo-parklink.png" alt="">
+        </div>
+        <span class="brand-word">
+            <span class="p">Park</span><span class="l">Link</span>
+        </span>
+    </a>
+    <ul class="nav-links">
+        <li><a href="#sobre">Proyecto</a></li>
+        <li><a href="#funciones">Funciones</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+        <li><a href="#contacto" class="nav-cta">Contacto</a></li>
+    </ul>
+</nav>
+
+<!-- HERO: logo completo (ícono + letras juntos) -->
+<section id="hero">
+    <img src="logo-parklink.png" alt="ParkLink" class="hero-logo">
+    <div class="hero-badge">En construcción · 2026</div>
+    <h1 class="hero-title">Estacionar en la ciudad,<br>sin el caos.</h1>
+    <p class="hero-desc">
+        ParkLink conecta conductores con cocheras disponibles en tiempo real. Reservás tu lugar antes de salir, pagás digital y llegás directo.
+    </p>
+    <div class="hero-actions">
+        <a href="#contacto" class="btn btn-primary">
+            Contactanos
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#sobre" class="btn btn-outline">Conocer el proyecto</a>
+    </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+    <div class="stats-inner">
+        <div class="stat-item">
+            <div class="stat-n">4</div>
+            <div class="stat-l">Ingenieros en Informática</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-n">CABA</div>
+            <div class="stat-l">Ciudad de lanzamiento</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-n">2026</div>
+            <div class="stat-l">Año del MVP</div>
+        </div>
+    </div>
+</div>
+
+<!-- SOBRE -->
+<section id="sobre">
+    <div class="about-grid">
+        <div class="about-left reveal">
+            <p class="tag">El proyecto</p>
+            <h2 class="sh">La cochera que necesitás,<br>cuando la necesitás</h2>
+            <p class="sp">En las grandes ciudades, encontrar estacionamiento consume tiempo y genera estrés. ParkLink propone un modelo colaborativo: propietarios de cocheras subutilizadas las monetizan, y conductores acceden a espacios seguros con solo unos toques.</p>
+            <div class="feat-list">
+                <div class="feat-row reveal d1">
+                    <div class="feat-ic">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7.4 11.5 7.7 11.8a.5.5 0 0 0 .6 0C12.6 21.5 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
+                    </div>
+                    <div class="feat-tx">
+                        <h4>Mapa en tiempo real</h4>
+                        <p>Cocheras disponibles geolocalizadas, actualizadas al instante.</p>
+                    </div>
+                </div>
+                <div class="feat-row reveal d1">
+                    <div class="feat-ic">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    </div>
+                    <div class="feat-tx">
+                        <h4>Reservas anticipadas</h4>
+                        <p>Reservá tu espacio antes de salir. Confirmación instantánea.</p>
+                    </div>
+                </div>
+                <div class="feat-row reveal d2">
+                    <div class="feat-ic">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+                    </div>
+                    <div class="feat-tx">
+                        <h4>Pagos digitales seguros</h4>
+                        <p>Sin efectivo, sin fricciones. Procesamiento integrado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mock-card reveal d2">
+            <div class="mock-header">
+                <span class="mock-title">Disponibilidad · Palermo</span>
+                <span class="mock-live"><span></span>En vivo</span>
+            </div>
+            <div class="slot-grid">
+                <div class="slot ocup">P</div><div class="slot libre">P</div><div class="slot ocup">P</div><div class="slot libre">P</div><div class="slot ocup">P</div>
+                <div class="slot libre">P</div><div class="slot ocup">P</div><div class="slot sel">★</div><div class="slot ocup">P</div><div class="slot libre">P</div>
+                <div class="slot ocup">P</div><div class="slot libre">P</div><div class="slot ocup">P</div><div class="slot ocup">P</div><div class="slot libre">P</div>
+            </div>
+            <div class="mock-result">
+                <div>
+                    <div class="mock-result-name">Cochera · Palermo Soho</div>
+                    <div class="mock-result-detail">$1.200 / hora &nbsp;·&nbsp; Disponible ahora</div>
+                </div>
+                <div class="mock-res-btn">Reservar</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FUNCIONES -->
+<section id="funciones">
+    <div class="func-hd">
+        <p class="tag">Funcionalidades</p>
+        <h2 class="sh">Lo que estamos construyendo</h2>
+        <p class="sp">Una plataforma completa para conductores y propietarios de cocheras.</p>
+    </div>
+    <div class="func-grid">
+        <div class="func-card reveal">
+            <div class="func-icon">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7.4 11.5 7.7 11.8a.5.5 0 0 0 .6 0C12.6 21.5 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
+            </div>
+            <h3>Geolocalización</h3>
+            <p>Mapa con cocheras disponibles alrededor del conductor, actualizado en tiempo real.</p>
+        </div>
+        <div class="func-card reveal d1">
+            <div class="func-icon">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <h3>Reservas</h3>
+            <p>Reservas anticipadas con franja horaria y confirmación instantánea para ambas partes.</p>
+        </div>
+        <div class="func-card reveal d2">
+            <div class="func-icon">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="2"/></svg>
+            </div>
+            <h3>Pagos digitales</h3>
+            <p>Procesamiento seguro e integrado. Sin efectivo, con confirmación inmediata.</p>
+        </div>
+        <div class="func-card reveal">
+            <div class="func-icon">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>Autenticación</h3>
+            <p>Registro y acceso seguro. Perfiles verificados para conductores y propietarios.</p>
+        </div>
+        <div class="func-card reveal d1">
+            <div class="func-icon">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+            </div>
+            <h3>Portal del propietario</h3>
+            <p>Panel para publicar cocheras, gestionar precios y monitorear reservas e ingresos.</p>
+        </div>
+        <div class="func-card reveal d2">
+            <div class="func-icon">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3>Escalabilidad</h3>
+            <p>Arquitectura preparada para IoT, predicción con IA y expansión a otras ciudades.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ROADMAP -->
+<section id="roadmap">
+    <div style="text-align:center; max-width:520px; margin:0 auto 40px;">
+        <p class="tag">Estado del proyecto</p>
+        <h2 class="sh">Dónde estamos</h2>
+    </div>
+    <div class="steps">
+        <div class="step done">
+            <div class="step-dot">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <span class="step-lbl">Planificación</span>
+        </div>
+        <div class="step-conn done"></div>
+        <div class="step done">
+            <div class="step-dot">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <span class="step-lbl">Diseño &amp; Marca</span>
+        </div>
+        <div class="step-conn done"></div>
+        <div class="step now">
+            <div class="step-dot">3</div>
+            <span class="step-lbl">Desarrollo</span>
+        </div>
+        <div class="step-conn pend"></div>
+        <div class="step next">
+            <div class="step-dot">4</div>
+            <span class="step-lbl">MVP</span>
+        </div>
+        <div class="step-conn pend"></div>
+        <div class="step next">
+            <div class="step-dot">5</div>
+            <span class="step-lbl">Lanzamiento</span>
+        </div>
+    </div>
+</section>
+
+<!-- EQUIPO -->
+<section id="equipo">
+    <div class="team-hd">
+        <p class="tag">El equipo</p>
+        <h2 class="sh">Quiénes somos</h2>
+        <p class="sp">Estudiantes de Ingeniería en Informática de la UBA, desarrollando ParkLink como Trabajo Profesional de grado.</p>
+    </div>
+    <div class="team-grid">
+        <div class="team-card reveal">
+            <div class="avatar" style="background:linear-gradient(135deg,#042347,#0a3d72);">TB</div>
+            <div class="t-name">Thiago Baez</div>
+            <div class="t-role">Ing. en Informática</div>
+            <a href="mailto:thiago@parklink.com.ar" class="t-mail">thiago@parklink.com.ar</a>
+        </div>
+        <div class="team-card reveal d1">
+            <div class="avatar" style="background:linear-gradient(135deg,#168B8D,#0d6b6d);">SD</div>
+            <div class="t-name">Santiago Domínguez</div>
+            <div class="t-role">Ing. en Informática</div>
+            <a href="mailto:santiago.dominguez@parklink.com.ar" class="t-mail">santiago.dominguez@parklink.com.ar</a>
+        </div>
+        <div class="team-card reveal d2">
+            <div class="avatar" style="background:linear-gradient(135deg,#042347,#168B8D);">FL</div>
+            <div class="t-name">Facundo Luzzi</div>
+            <div class="t-role">Ing. en Informática</div>
+            <a href="mailto:facundo@parklink.com.ar" class="t-mail">facundo@parklink.com.ar</a>
+        </div>
+        <div class="team-card reveal d3">
+            <div class="avatar" style="background:linear-gradient(135deg,#0a3d72,#168B8D);">SV</div>
+            <div class="t-name">Santiago Varga</div>
+            <div class="t-role">Ing. en Informática</div>
+            <a href="mailto:santiago.varga@parklink.com.ar" class="t-mail">santiago.varga@parklink.com.ar</a>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+    <p class="tag">Contacto</p>
+    <h2 class="sh">¿Querés saber más?</h2>
+    <p class="sp">Estamos en pleno desarrollo. Si tenés una cochera, sos inversor o simplemente querés estar al tanto, escribinos.</p>
+    <a href="mailto:contacto@parklink.com.ar" class="cta-mail">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+        contacto@parklink.com.ar
+    </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="foot-inner">
+        <!-- Ícono solo (símbolo P recortado) + wordmark de texto -->
+        <div class="foot-brand">
+            <div class="foot-mark">
+                <img src="logo-parklink.png" alt="">
+            </div>
+            <span class="foot-word">
+                <span class="p">Park</span><span class="l">Link</span>
+            </span>
+        </div>
+        <ul class="foot-nav">
+            <li><a href="#sobre">Proyecto</a></li>
+            <li><a href="#funciones">Funciones</a></li>
+            <li><a href="#equipo">Equipo</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <p class="foot-copy">© 2026 ParkLink. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<script>
+    const io = new IntersectionObserver(
+        entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+        { threshold: 0.1 }
+    );
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
