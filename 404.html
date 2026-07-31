@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 — Página no encontrada · ParkLink</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .error-main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 7%;
+            background: var(--white);
+        }
+
+        .error-logo {
+            height: 72px;
+            width: auto;
+            margin-bottom: 48px;
+        }
+
+        .error-code {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(5rem, 12vw, 9rem);
+            font-weight: 700;
+            line-height: 1;
+            color: var(--gray-bg);
+            letter-spacing: -0.04em;
+            margin-bottom: 0;
+            /* Overlay the number with a slight teal tint */
+            background: linear-gradient(135deg, #DDE3EC 0%, #E2E8F0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .error-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(1.4rem, 3vw, 2rem);
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 14px;
+            margin-top: 8px;
+        }
+
+        .error-desc {
+            font-size: 0.975rem;
+            color: var(--text-muted);
+            line-height: 1.75;
+            max-width: 420px;
+            margin: 0 auto 36px;
+        }
+
+        .error-actions {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        footer {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="index.html" class="nav-brand">
+        <div class="brand-mark">
+            <img src="logo-parklink.png" alt="">
+        </div>
+        <span class="brand-word">
+            <span class="p">Park</span><span class="l">Link</span>
+        </span>
+    </a>
+    <ul class="nav-links">
+        <li><a href="index.html#sobre">Proyecto</a></li>
+        <li><a href="index.html#funciones">Funciones</a></li>
+        <li><a href="index.html#equipo">Equipo</a></li>
+        <li><a href="index.html#contacto" class="nav-cta">Contacto</a></li>
+    </ul>
+</nav>
+
+<!-- ERROR CONTENT -->
+<main class="error-main">
+    <img src="logo-parklink.png" alt="ParkLink" class="error-logo">
+
+    <div class="error-code">404</div>
+    <h1 class="error-title">Esta página no existe</h1>
+    <p class="error-desc">
+        La dirección que buscás no existe o fue movida. Pero no te preocupes — todavía podés encontrar tu lugar.
+    </p>
+
+    <div class="error-actions">
+        <a href="index.html" class="btn btn-primary">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+            Volver al inicio
+        </a>
+        <a href="mailto:contacto@parklink.com.ar" class="btn btn-outline">Contactarnos</a>
+    </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="foot-inner">
+        <div class="foot-brand">
+            <div class="foot-mark">
+                <img src="logo-parklink.png" alt="">
+            </div>
+            <span class="foot-word">
+                <span class="p">Park</span><span class="l">Link</span>
+            </span>
+        </div>
+        <ul class="foot-nav">
+            <li><a href="index.html#sobre">Proyecto</a></li>
+            <li><a href="index.html#funciones">Funciones</a></li>
+            <li><a href="index.html#equipo">Equipo</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+        <p class="foot-copy">© 2026 ParkLink. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+</body>
+</html>
