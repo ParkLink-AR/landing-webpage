@@ -55,29 +55,11 @@ nav {
     text-decoration: none;
 }
 
-.brand-mark {
-    width: 32px;
-    height: 38px;
-    overflow: hidden;
-    flex-shrink: 0;
-}
-.brand-mark img {
-    width: 78px;
-    height: auto;
-    margin-top: -1px;
-    margin-left: -23px;
+.brand-logo {
     display: block;
+    height: 26px;
+    width: auto;
 }
-
-.brand-word {
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 700;
-    font-size: 1.25rem;
-    letter-spacing: -0.02em;
-    line-height: 1;
-}
-.brand-word .p { color: var(--navy); }
-.brand-word .l { color: var(--teal); }
 
 .nav-links {
     display: flex;
