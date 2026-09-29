@@ -15,7 +15,7 @@
 
 <!-- Topbar -->
 <div class="topbar">
-    <strong>ParkLink</strong> &nbsp;·&nbsp; MVP en desarrollo activo &nbsp;·&nbsp; Lanzamiento previsto 2026
+    <strong>ParkLink</strong> &nbsp;·&nbsp; App en fase de pruebas &nbsp;·&nbsp; Lanzamiento previsto 2026
 </div>
 
 <!-- NAV: icono recortado (solo el símbolo P) + wordmark de texto (solo las letras) -->
@@ -24,8 +24,9 @@
         <img src="logo-letras.png" alt="ParkLink" class="brand-logo">
     </a>
     <ul class="nav-links">
-        <li><a href="#equipo">Equipo</a></li>
         <li><a href="#sobre">Proyecto</a></li>
+        <li><a href="#capturas">La app</a></li>
+        <li><a href="#equipo">Equipo</a></li>
         <li><a href="#funciones">Funciones</a></li>
         <li><a href="#contacto" class="nav-cta">Contacto</a></li>
     </ul>
@@ -34,37 +35,120 @@
 <!-- HERO: logo completo (ícono + letras juntos) -->
 <section id="hero">
     <img src="logo-parklink.png" alt="ParkLink" class="hero-logo">
-    <div class="hero-badge">En construcción · 2026</div>
+    <div class="hero-badge">App en fase de pruebas · 2026</div>
     <h1 class="hero-title">Estacionar en la ciudad,<br>sin el caos.</h1>
     <p class="hero-desc">
-        ParkLink conecta conductores con cocheras disponibles en tiempo real. Reservás tu lugar antes de salir, pagás digital y llegás directo.
+        ParkLink conecta conductores con cocheras disponibles en tiempo real. Reservás por hora o por estadía, pagás con Mercado Pago desde la app y coordinás todo con el propietario por chat.
     </p>
     <div class="hero-actions">
         <a href="#contacto" class="btn btn-primary">
             Contactanos
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <a href="#sobre" class="btn btn-outline">Conocer el proyecto</a>
+        <a href="#capturas" class="btn btn-outline">Ver capturas de la app</a>
     </div>
 </section>
 
-<!-- STATS -->
-<div class="stats-bar">
-    <div class="stats-inner">
-        <div class="stat-item">
-            <div class="stat-n">4</div>
-            <div class="stat-l">Ingenieros en Informática</div>
+<!-- SOBRE -->
+<section id="sobre">
+    <div class="about-grid">
+        <div class="about-left reveal">
+            <p class="tag">El proyecto</p>
+            <h2 class="sh">La cochera que necesitás,<br>cuando la necesitás</h2>
+            <p class="sp">En las grandes ciudades, encontrar estacionamiento consume tiempo y genera estrés. ParkLink propone un modelo colaborativo: propietarios de cocheras subutilizadas las publican, y conductores reservan un espacio seguro con unos toques, pagan desde la app y coordinan la entrega por chat.</p>
+            <div class="feat-list">
+                <div class="feat-row reveal d1">
+                    <div class="feat-ic">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7.4 11.5 7.7 11.8a.5.5 0 0 0 .6 0C12.6 21.5 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
+                    </div>
+                    <div class="feat-tx">
+                        <h4>Mapa con filtros reales</h4>
+                        <p>Búsqueda por dirección, precio, distancia y horario, con cocheras agrupadas en el mapa.</p>
+                    </div>
+                </div>
+                <div class="feat-row reveal d1">
+                    <div class="feat-ic">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    </div>
+                    <div class="feat-tx">
+                        <h4>Reservas por hora o por estadía</h4>
+                        <p>Confirmación instantánea o aprobación del propietario, según cómo publicó su cochera.</p>
+                    </div>
+                </div>
+                <div class="feat-row reveal d2">
+                    <div class="feat-ic">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+                    </div>
+                    <div class="feat-tx">
+                        <h4>Pago integrado con Mercado Pago</h4>
+                        <p>Checkout dentro de la app y confirmación automática apenas se acredita el pago.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="store-cta reveal d2">
+                <p class="store-soon">Muy pronto disponible en</p>
+                <div class="store-badges">
+                    <a href="#contacto" aria-label="Próximamente en App Store">
+                        <img src="assets/app-store-badge.svg" alt="Download on the App Store" class="store-badge-img">
+                    </a>
+                    <a href="#contacto" aria-label="Próximamente en Google Play">
+                        <img src="assets/google-play-badge.png" alt="Get it on Google Play" class="store-badge-img">
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="stat-item">
-            <div class="stat-n">CABA</div>
-            <div class="stat-l">Ciudad de lanzamiento</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-n">2026</div>
-            <div class="stat-l">Año del MVP</div>
+
+        <div class="about-phone reveal d2">
+            <img src="screenshots/mapa-busqueda.png" alt="Mapa de búsqueda ParkLink" class="phone-shot">
         </div>
     </div>
-</div>
+</section>
+
+<!-- CAPTURAS -->
+<section id="capturas">
+    <div class="capturas-hd">
+        <p class="tag">La app</p>
+        <h2 class="sh">Así se ve ParkLink hoy</h2>
+        <p class="sp">Capturas reales de la app, del lado del conductor y del propietario.</p>
+    </div>
+    <div class="marquee-viewport">
+        <div class="marquee-track" id="marqueeTrack">
+            <div class="phone-item">
+                <img src="screenshots/mapa-busqueda.png" alt="Mapa de búsqueda" class="phone-shot">
+                <div class="phone-cap"><h4>Mapa de búsqueda</h4><p>Cocheras agrupadas en el mapa con filtros por precio, distancia y horario.</p></div>
+            </div>
+            <div class="phone-item">
+                <img src="screenshots/resultados-fotos.png" alt="Resultados con fotos reales" class="phone-shot">
+                <div class="phone-cap"><h4>Fichas con fotos reales</h4><p>Cada cochera con sus fotos, calificación y distancia exacta.</p></div>
+            </div>
+            <div class="phone-item">
+                <img src="screenshots/pago-mercadopago.png" alt="Pago con Mercado Pago" class="phone-shot">
+                <div class="phone-cap"><h4>Pago integrado</h4><p>Checkout con Mercado Pago sin salir de la app, con confirmación automática.</p></div>
+            </div>
+            <div class="phone-item">
+                <img src="screenshots/codigo-llegada.png" alt="Código de llegada" class="phone-shot">
+                <div class="phone-cap"><h4>Código de llegada</h4><p>Un PIN de 4 dígitos valida en persona que el conductor llegó, evitando fraudes.</p></div>
+            </div>
+            <div class="phone-item">
+                <img src="screenshots/chat-reserva.png" alt="Chat de la reserva" class="phone-shot">
+                <div class="phone-cap"><h4>Chat por reserva</h4><p>Mensajería directa entre conductor y propietario para coordinar la llegada.</p></div>
+            </div>
+            <div class="phone-item">
+                <img src="screenshots/calendario-propietario.png" alt="Calendario del propietario" class="phone-shot">
+                <div class="phone-cap"><h4>Calendario del propietario</h4><p>Todas las reservas del mes, de un vistazo.</p></div>
+            </div>
+            <div class="phone-item">
+                <img src="screenshots/publicar-cochera.png" alt="Publicar cochera" class="phone-shot">
+                <div class="phone-cap"><h4>Publicar una cochera</h4><p>Precio por tipo de vehículo, disponibilidad horaria y por estadía.</p></div>
+            </div>
+            <div class="phone-item">
+                <img src="screenshots/reputacion-resenas.png" alt="Reputación y reseñas" class="phone-shot">
+                <div class="phone-cap"><h4>Reputación</h4><p>Reseñas mutuas después de cada reserva, visibles en el perfil.</p></div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- EQUIPO -->
 <section id="equipo">
@@ -101,117 +185,59 @@
     </div>
 </section>
 
-<!-- SOBRE -->
-<section id="sobre">
-    <div class="about-grid">
-        <div class="about-left reveal">
-            <p class="tag">El proyecto</p>
-            <h2 class="sh">La cochera que necesitás,<br>cuando la necesitás</h2>
-            <p class="sp">En las grandes ciudades, encontrar estacionamiento consume tiempo y genera estrés. ParkLink propone un modelo colaborativo: propietarios de cocheras subutilizadas las monetizan, y conductores acceden a espacios seguros con solo unos toques.</p>
-            <div class="feat-list">
-                <div class="feat-row reveal d1">
-                    <div class="feat-ic">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7.4 11.5 7.7 11.8a.5.5 0 0 0 .6 0C12.6 21.5 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
-                    </div>
-                    <div class="feat-tx">
-                        <h4>Mapa en tiempo real</h4>
-                        <p>Cocheras disponibles geolocalizadas, actualizadas al instante.</p>
-                    </div>
-                </div>
-                <div class="feat-row reveal d1">
-                    <div class="feat-ic">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                    </div>
-                    <div class="feat-tx">
-                        <h4>Reservas anticipadas</h4>
-                        <p>Reservá tu espacio antes de salir. Confirmación instantánea.</p>
-                    </div>
-                </div>
-                <div class="feat-row reveal d2">
-                    <div class="feat-ic">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
-                    </div>
-                    <div class="feat-tx">
-                        <h4>Pagos digitales seguros</h4>
-                        <p>Sin efectivo, sin fricciones. Procesamiento integrado.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="mock-card reveal d2">
-            <div class="mock-header">
-                <span class="mock-title">Disponibilidad · Palermo</span>
-                <span class="mock-live"><span></span>En vivo</span>
-            </div>
-            <div class="slot-grid">
-                <div class="slot ocup">P</div><div class="slot libre">P</div><div class="slot ocup">P</div><div class="slot libre">P</div><div class="slot ocup">P</div>
-                <div class="slot libre">P</div><div class="slot ocup">P</div><div class="slot sel">★</div><div class="slot ocup">P</div><div class="slot libre">P</div>
-                <div class="slot ocup">P</div><div class="slot libre">P</div><div class="slot ocup">P</div><div class="slot ocup">P</div><div class="slot libre">P</div>
-            </div>
-            <div class="mock-result">
-                <div>
-                    <div class="mock-result-name">Cochera · Palermo Soho</div>
-                    <div class="mock-result-detail">$1.200 / hora &nbsp;·&nbsp; Disponible ahora</div>
-                </div>
-                <div class="mock-res-btn">Reservar</div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- FUNCIONES -->
 <section id="funciones">
     <div class="func-hd">
         <p class="tag">Funcionalidades</p>
-        <h2 class="sh">Lo que estamos construyendo</h2>
-        <p class="sp">Una plataforma completa para conductores y propietarios de cocheras.</p>
+        <h2 class="sh">Lo que ya implementamos</h2>
+        <p class="sp">Una plataforma completa para conductores y propietarios de cocheras, ya funcionando de punta a punta.</p>
     </div>
     <div class="func-grid">
         <div class="func-card reveal">
             <div class="func-icon">
                 <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7.4 11.5 7.7 11.8a.5.5 0 0 0 .6 0C12.6 21.5 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
             </div>
-            <h3>Geolocalización</h3>
-            <p>Mapa con cocheras disponibles alrededor del conductor, actualizado en tiempo real.</p>
+            <h3>Búsqueda con mapa</h3>
+            <p>Cocheras agrupadas en el mapa (clustering), búsqueda por dirección y filtros por precio, distancia, techo y horario.</p>
         </div>
         <div class="func-card reveal d1">
             <div class="func-icon">
                 <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
             </div>
-            <h3>Reservas</h3>
-            <p>Reservas anticipadas con franja horaria y confirmación instantánea para ambas partes.</p>
+            <h3>Reservas por hora o estadía</h3>
+            <p>El propietario elige si la reserva se confirma al instante o requiere su aprobación antes de cerrarse.</p>
         </div>
         <div class="func-card reveal d2">
             <div class="func-icon">
                 <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="2"/></svg>
             </div>
-            <h3>Pagos digitales</h3>
-            <p>Procesamiento seguro e integrado. Sin efectivo, con confirmación inmediata.</p>
+            <h3>Pagos con Mercado Pago</h3>
+            <p>Checkout dentro de la app: al confirmarse el pago, la reserva se actualiza sola vía webhook.</p>
         </div>
         <div class="func-card reveal">
             <div class="func-icon">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
             </div>
-            <h3>Autenticación</h3>
-            <p>Registro y acceso seguro. Perfiles verificados para conductores y propietarios.</p>
+            <h3>Chat y soporte por reserva</h3>
+            <p>Mensajería directa entre conductor y propietario, más tickets de soporte para resolver cualquier problema.</p>
         </div>
         <div class="func-card reveal d1">
             <div class="func-icon">
                 <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
             </div>
-            <h3>Portal del propietario</h3>
-            <p>Panel para publicar cocheras, gestionar precios y monitorear reservas e ingresos.</p>
+            <h3>Panel del propietario</h3>
+            <p>Publicación de cocheras, disponibilidad y precios, calendario de reservas y liquidaciones con transferencia a CBU.</p>
         </div>
         <div class="func-card reveal d2">
             <div class="func-icon">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
             </div>
-            <h3>Escalabilidad</h3>
-            <p>Arquitectura preparada para IoT, predicción con IA y expansión a otras ciudades.</p>
+            <h3>Reputación y notificaciones</h3>
+            <p>Reseñas mutuas después de cada reserva y notificaciones push en tiempo real en cada paso.</p>
         </div>
     </div>
 </section>
+
 
 <!-- ROADMAP -->
 <section id="roadmap">
@@ -234,14 +260,16 @@
             <span class="step-lbl">Diseño &amp; Marca</span>
         </div>
         <div class="step-conn done"></div>
-        <div class="step now">
-            <div class="step-dot">3</div>
+        <div class="step done">
+            <div class="step-dot">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
             <span class="step-lbl">Desarrollo</span>
         </div>
-        <div class="step-conn pend"></div>
-        <div class="step next">
+        <div class="step-conn done"></div>
+        <div class="step now">
             <div class="step-dot">4</div>
-            <span class="step-lbl">MVP</span>
+            <span class="step-lbl">MVP &amp; Beta</span>
         </div>
         <div class="step-conn pend"></div>
         <div class="step next">
@@ -275,8 +303,9 @@
             </span>
         </div>
         <ul class="foot-nav">
-            <li><a href="#equipo">Equipo</a></li>
             <li><a href="#sobre">Proyecto</a></li>
+            <li><a href="#capturas">La app</a></li>
+            <li><a href="#equipo">Equipo</a></li>
             <li><a href="#funciones">Funciones</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
@@ -290,6 +319,14 @@
         { threshold: 0.1 }
     );
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // Duplica las capturas una vez para que el carrusel gire sin costura visible.
+    const track = document.getElementById('marqueeTrack');
+    if (track) {
+        const clone = track.innerHTML;
+        track.insertAdjacentHTML('beforeend', clone);
+        track.querySelectorAll('.phone-item:nth-child(n+9) img').forEach(img => img.setAttribute('aria-hidden', 'true'));
+    }
 </script>
 </body>
 </html>

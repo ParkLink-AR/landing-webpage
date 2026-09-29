@@ -139,6 +139,34 @@ nav {
     flex-wrap: wrap;
 }
 
+/* ── DESCARGA: badges oficiales de App Store / Google Play ── */
+.store-cta {
+    margin-top: 30px;
+}
+.store-soon {
+    margin-bottom: 14px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+.store-badges {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+.store-badges a {
+    display: inline-flex;
+    transition: transform 0.18s;
+}
+.store-badges a:hover { transform: translateY(-2px); }
+.store-badge-img {
+    display: block;
+    height: 50px;
+    width: auto;
+}
+
 .btn {
     display: inline-flex;
     align-items: center;
@@ -166,37 +194,6 @@ nav {
 .btn-outline:hover {
     border-color: var(--navy);
     color: var(--navy);
-}
-
-/* ── STATS ── */
-.stats-bar {
-    background: var(--navy);
-    padding: 32px 7%;
-}
-.stats-inner {
-    display: flex;
-    justify-content: center;
-    max-width: 680px;
-    margin: 0 auto;
-}
-.stat-item {
-    flex: 1;
-    text-align: center;
-    padding: 14px;
-    border-right: 1px solid rgba(255,255,255,0.1);
-}
-.stat-item:last-child { border-right: none; }
-.stat-n {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 2rem;
-    font-weight: 700;
-    color: white;
-    line-height: 1;
-}
-.stat-l {
-    font-size: 0.76rem;
-    color: rgba(255,255,255,0.45);
-    margin-top: 6px;
 }
 
 /* ── SHARED ── */
@@ -271,100 +268,78 @@ section { padding: 84px 7%; }
     line-height: 1.6;
 }
 
-/* App mockup card */
-.mock-card {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 22px;
-    box-shadow: 0 2px 16px rgba(4,35,71,0.06), 0 0 0 1px rgba(4,35,71,0.02);
-}
-.mock-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 16px;
-}
-.mock-title {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 0.78rem;
-    font-weight: 600;
-    color: var(--navy);
-}
-.mock-live {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 0.68rem;
-    font-weight: 600;
-    color: var(--teal);
-}
-.mock-live span {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--teal);
+/* Real app screenshots (already framed with the iPhone 14 Pro bezel in the image itself) */
+.phone-shot {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 30px 40px rgba(4,35,71,0.35));
 }
 
-.slot-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 5px;
-    margin-bottom: 16px;
-}
-.slot {
-    height: 34px;
-    border-radius: 5px;
+.about-phone {
     display: flex;
-    align-items: center;
     justify-content: center;
-    font-size: 0.6rem;
-    font-weight: 700;
 }
-.slot.libre {
-    background: rgba(22,139,141,0.08);
-    border: 1px solid rgba(22,139,141,0.2);
-    color: var(--teal);
-}
-.slot.ocup {
-    background: var(--gray-bg);
-    border: 1px solid var(--border);
-    color: var(--text-muted);
-}
-.slot.sel {
-    background: var(--teal);
-    color: white;
+.about-phone .phone-shot {
+    width: 100%;
+    max-width: 300px;
 }
 
-.mock-result {
-    background: var(--gray-bg);
-    border-radius: 9px;
-    padding: 13px 15px;
+/* ── CAPTURAS: infinite horizontal carousel ── */
+#capturas {
+    background: linear-gradient(180deg, var(--navy) 0%, var(--navy-dark) 100%);
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
+}
+.capturas-hd { padding: 0 7%; }
+#capturas .tag { color: rgba(26,173,175,0.9); }
+#capturas .sh { color: white; }
+#capturas .sp { color: rgba(255,255,255,0.5); max-width: 520px; margin: 0 auto; }
+
+.marquee-viewport {
+    margin-top: 54px;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent, black 6%, black 94%, transparent);
+    mask-image: linear-gradient(90deg, transparent, black 6%, black 94%, transparent);
+}
+.marquee-track {
     display: flex;
+    align-items: flex-start;
+    gap: 56px;
+    width: max-content;
+    padding: 10px 28px 20px;
+    animation: marquee-scroll 52s linear infinite;
+}
+.marquee-viewport:hover .marquee-track { animation-play-state: paused; }
+@keyframes marquee-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+.phone-item {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-}
-.mock-result-name {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 0.78rem;
-    font-weight: 600;
-    color: var(--navy);
-    margin-bottom: 2px;
-}
-.mock-result-detail {
-    font-size: 0.68rem;
-    color: var(--text-muted);
-}
-.mock-res-btn {
-    background: var(--teal);
-    color: white;
-    font-size: 0.7rem;
-    font-weight: 600;
-    padding: 7px 13px;
-    border-radius: 6px;
-    white-space: nowrap;
     flex-shrink: 0;
+    width: 300px;
+}
+.phone-cap {
+    text-align: center;
+    margin-top: 22px;
+    max-width: 260px;
+}
+.phone-cap h4 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 5px;
+}
+.phone-cap p {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.6;
 }
 
 /* ── FUNCIONES ── */
@@ -638,6 +613,10 @@ footer {
 .d2 { transition-delay: 0.2s; }
 .d3 { transition-delay: 0.3s; }
 
+@media (prefers-reduced-motion: reduce) {
+    .marquee-track { animation: none; }
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 940px) {
     .about-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -649,12 +628,13 @@ footer {
     .nav-links { display: none; }
     section { padding: 60px 5%; }
     .func-grid { grid-template-columns: 1fr; }
-    .stats-inner { flex-direction: column; }
-    .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
-    .stat-item:last-child { border-bottom: none; }
     .steps { gap: 6px; }
     .step-conn { max-width: 28px; }
     .foot-inner { flex-direction: column; text-align: center; }
     .foot-nav { flex-wrap: wrap; justify-content: center; }
     .foot-brand { justify-content: center; }
+    .capturas-hd { padding: 0 5%; }
+    .marquee-track { gap: 32px; animation-duration: 38s; }
+    .phone-item { width: 220px; }
+    .about-phone .phone-shot { max-width: 230px; }
 }
