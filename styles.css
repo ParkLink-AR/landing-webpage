@@ -99,20 +99,6 @@ nav {
     margin: 0 auto 28px;
 }
 
-.hero-badge {
-    display: inline-block;
-    background: rgba(22,139,141,0.08);
-    border: 1px solid rgba(22,139,141,0.22);
-    color: var(--teal);
-    padding: 4px 14px;
-    border-radius: 100px;
-    font-size: 0.74rem;
-    font-weight: 600;
-    letter-spacing: 0.07em;
-    text-transform: uppercase;
-    margin-bottom: 26px;
-}
-
 .hero-title {
     font-family: 'Space Grotesk', sans-serif;
     font-size: clamp(2.2rem, 4.2vw, 3.6rem);
@@ -282,7 +268,7 @@ section { padding: 84px 7%; }
 }
 .about-phone .phone-shot {
     width: 100%;
-    max-width: 300px;
+    max-width: 340px;
 }
 
 /* ── CAPTURAS: infinite horizontal carousel ── */
@@ -310,9 +296,13 @@ section { padding: 84px 7%; }
     gap: 56px;
     width: max-content;
     padding: 10px 28px 20px;
-    animation: marquee-scroll 52s linear infinite;
+    --marquee-duration: 58s;
+    animation: marquee-scroll var(--marquee-duration) linear infinite;
 }
-.marquee-viewport:hover .marquee-track { animation-play-state: paused; }
+/* Con JS la tira se mueve por script y se puede arrastrar */
+.marquee-track.is-js { animation: none; will-change: transform; }
+.marquee-viewport:has(.is-js) { cursor: grab; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
+.marquee-viewport.is-dragging { cursor: grabbing; }
 @keyframes marquee-scroll {
     from { transform: translateX(0); }
     to   { transform: translateX(-50%); }
@@ -322,7 +312,7 @@ section { padding: 84px 7%; }
     flex-direction: column;
     align-items: center;
     flex-shrink: 0;
-    width: 300px;
+    width: 340px;
 }
 .phone-cap {
     text-align: center;
@@ -343,7 +333,7 @@ section { padding: 84px 7%; }
 }
 
 /* ── FUNCIONES ── */
-#funciones { background: white; }
+#funciones { background: white; padding-top: 42px; }
 .func-hd {
     text-align: center;
     max-width: 520px;
@@ -447,7 +437,7 @@ section { padding: 84px 7%; }
 .step-conn.pend { background: var(--gray-mid); }
 
 /* ── EQUIPO ── */
-#equipo { background: white; }
+#equipo { background: white; padding-bottom: 42px; }
 .team-hd {
     text-align: center;
     max-width: 520px;
@@ -515,19 +505,16 @@ section { padding: 84px 7%; }
 
 /* ── CONTACTO ── */
 #contacto {
-    background: var(--navy);
+    background: white;
     text-align: center;
 }
-#contacto .tag { color: rgba(22,139,141,0.9); }
-#contacto .sh  { color: white; }
-#contacto .sp  { color: rgba(255,255,255,0.45); max-width: 440px; margin: 0 auto 32px; }
+#contacto .sp  { max-width: 440px; margin: 0 auto 32px; }
 
 .cta-mail {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.13);
+    background: var(--teal);
     color: white;
     padding: 13px 26px;
     border-radius: 8px;
@@ -537,52 +524,143 @@ section { padding: 84px 7%; }
     transition: all 0.18s;
 }
 .cta-mail:hover {
-    background: rgba(22,139,141,0.12);
-    border-color: rgba(22,139,141,0.38);
+    background: var(--teal-soft);
+    box-shadow: 0 4px 14px rgba(22,139,141,0.22);
 }
 
 /* ── FOOTER ── */
 footer {
-    background: var(--navy-dark);
-    border-top: 1px solid rgba(255,255,255,0.06);
-    padding: 30px 7%;
+    position: relative;
+    background:
+        radial-gradient(ellipse 60% 120% at 0% 0%, rgba(22,139,141,0.14), transparent 60%),
+        var(--navy-dark);
+    color: rgba(255,255,255,0.55);
+    padding: 64px 7% 0;
 }
-.foot-inner {
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--teal-soft), transparent);
+    opacity: 0.6;
+}
+.foot-main {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.2fr 1fr;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 48px;
+}
+.foot-logo {
+    height: 38px;
+    width: auto;
+    display: block;
+    margin-bottom: 18px;
+}
+.foot-tagline {
+    font-size: 0.86rem;
+    line-height: 1.65;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+.foot-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--teal-soft);
+    background: rgba(26,173,175,0.08);
+    border: 1px solid rgba(26,173,175,0.22);
+    padding: 5px 12px;
+    border-radius: 100px;
+}
+.foot-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--teal-soft);
+    box-shadow: 0 0 0 0 rgba(26,173,175,0.6);
+    animation: foot-pulse 2s ease-out infinite;
+}
+@keyframes foot-pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(26,173,175,0.6); }
+    100% { box-shadow: 0 0 0 8px rgba(26,173,175,0); }
+}
+.foot-col h5 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 18px;
+}
+.foot-col ul { list-style: none; }
+.foot-col li + li { margin-top: 10px; }
+.foot-col ul a {
+    color: rgba(255,255,255,0.55);
+    text-decoration: none;
+    font-size: 0.86rem;
+    transition: color 0.18s, padding-left 0.18s;
+}
+.foot-col ul a:hover { color: var(--teal-soft); padding-left: 4px; }
+.foot-mail {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.86rem;
+    font-weight: 500;
+    transition: color 0.18s;
+}
+.foot-mail:hover { color: var(--teal-soft); }
+.foot-note {
+    font-size: 0.8rem;
+    line-height: 1.6;
+    margin-top: 12px;
+    max-width: 240px;
+}
+.foot-badges {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+.foot-badges img { height: 38px; width: auto; display: block; opacity: 0.85; }
+
+.foot-bottom {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
     gap: 16px;
     max-width: 1100px;
     margin: 0 auto;
+    padding: 22px 0;
+    border-top: 1px solid rgba(255,255,255,0.08);
 }
-.foot-brand {
-    display: flex;
-    align-items: center;
-}
-.foot-logo {
-    height: 36px;
-    width: auto;
-    display: block;
-}
-
-.foot-nav {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-}
-.foot-nav a {
-    color: rgba(255,255,255,0.3);
-    text-decoration: none;
-    font-size: 0.78rem;
-    transition: color 0.18s;
-}
-.foot-nav a:hover { color: rgba(255,255,255,0.58); }
-
 .foot-copy {
-    color: rgba(255,255,255,0.22);
-    font-size: 0.74rem;
+    color: rgba(255,255,255,0.35);
+    font-size: 0.76rem;
 }
+.foot-top {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: rgba(255,255,255,0.55);
+    text-decoration: none;
+    font-size: 0.76rem;
+    font-weight: 500;
+    padding: 6px 12px;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 100px;
+    transition: color 0.18s, border-color 0.18s;
+}
+.foot-top:hover { color: white; border-color: var(--teal-soft); }
 
 /* ── REVEAL ── */
 .reveal {
@@ -597,13 +675,16 @@ footer {
 
 @media (prefers-reduced-motion: reduce) {
     .marquee-track { animation: none; }
+    .foot-dot { animation: none; }
 }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 940px) {
     .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .about-phone { order: -1; }
     .func-grid  { grid-template-columns: 1fr 1fr; }
     .team-grid  { grid-template-columns: 1fr 1fr; }
+    .foot-main  { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 580px) {
     nav { padding: 0 5%; }
@@ -612,11 +693,12 @@ footer {
     .func-grid { grid-template-columns: 1fr; }
     .steps { gap: 6px; }
     .step-conn { max-width: 28px; }
-    .foot-inner { flex-direction: column; text-align: center; }
-    .foot-nav { flex-wrap: wrap; justify-content: center; }
-    .foot-brand { justify-content: center; }
+    footer { padding: 48px 5% 0; }
+    .foot-main { grid-template-columns: 1fr; gap: 32px; }
+    .foot-bottom { flex-direction: column-reverse; }
+    .foot-badges { flex-direction: row; }
     .capturas-hd { padding: 0 5%; }
-    .marquee-track { gap: 32px; animation-duration: 38s; }
-    .phone-item { width: 220px; }
-    .about-phone .phone-shot { max-width: 230px; }
+    .marquee-track { gap: 32px; --marquee-duration: 42s; }
+    .phone-item { width: 250px; }
+    .about-phone .phone-shot { max-width: 250px; }
 }

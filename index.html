@@ -35,7 +35,6 @@
 <!-- HERO: logo completo (ícono + letras juntos) -->
 <section id="hero">
     <img src="assets/logos/logo-parklink.png" alt="ParkLink" class="hero-logo">
-    <div class="hero-badge">App en fase de pruebas · 2026</div>
     <h1 class="hero-title">Estacionar en la ciudad,<br>sin el caos.</h1>
     <p class="hero-desc">
         ParkLink conecta conductores con cocheras disponibles en tiempo real. Reservás por hora o por estadía, pagás con Mercado Pago desde la app y coordinás todo con el propietario por chat.
@@ -296,18 +295,44 @@
 
 <!-- FOOTER -->
 <footer>
-    <div class="foot-inner">
+    <div class="foot-main">
         <div class="foot-brand">
             <img src="assets/logos/logo-letras-darkmode.png" alt="ParkLink" class="foot-logo">
+            <p class="foot-tagline">Estacionar en la ciudad, sin el caos. Conectamos conductores con cocheras disponibles en tiempo real.</p>
+            <span class="foot-status"><span class="foot-dot"></span>Lanzamiento previsto diciembre de 2026</span>
         </div>
-        <ul class="foot-nav">
-            <li><a href="#sobre">Proyecto</a></li>
-            <li><a href="#capturas">La app</a></li>
-            <li><a href="#equipo">Equipo</a></li>
-            <li><a href="#funciones">Funciones</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
+        <div class="foot-col">
+            <h5>Navegación</h5>
+            <ul>
+                <li><a href="#sobre">Proyecto</a></li>
+                <li><a href="#capturas">La app</a></li>
+                <li><a href="#equipo">Equipo</a></li>
+                <li><a href="#funciones">Funciones</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="foot-col">
+            <h5>Contacto</h5>
+            <a href="mailto:contacto@parklink.com.ar" class="foot-mail">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+                contacto@parklink.com.ar
+            </a>
+            <p class="foot-note">¿Tenés una cochera o querés sumarte al proyecto? Escribinos.</p>
+        </div>
+        <div class="foot-col">
+            <h5>Muy pronto en</h5>
+            <div class="foot-badges">
+                <img src="assets/logos/app-store-badge.svg" alt="App Store">
+                <img src="assets/logos/google-play-badge.png" alt="Google Play">
+            </div>
+        </div>
+    </div>
+    <div class="foot-bottom">
         <p class="foot-copy">© 2026 ParkLink. Todos los derechos reservados.</p>
+        <a href="#" class="foot-top">
+            Volver arriba
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+        </a>
     </div>
 </footer>
 
@@ -325,6 +350,56 @@
         const clone = track.innerHTML;
         track.insertAdjacentHTML('beforeend', clone);
         track.querySelectorAll(`.phone-item:nth-child(n+${count + 1}) img`).forEach(img => img.setAttribute('aria-hidden', 'true'));
+        track.querySelectorAll('img').forEach(img => img.draggable = false);
+
+        // Movimiento por JS (reemplaza la animación CSS) para poder arrastrar la tira
+        // y que al soltarla siga girando desde donde quedó, a la misma velocidad.
+        const viewport = track.parentElement;
+        const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+        track.classList.add('is-js');
+
+        let offset = 0, period = 1, speed = 0;
+        let dragging = false, dragStartX = 0, dragStartOffset = 0;
+
+        const measure = () => {
+            // Distancia de una vuelta: del primer original a su copia.
+            period = track.children[count].offsetLeft - track.children[0].offsetLeft || 1;
+            const secs = parseFloat(getComputedStyle(track).getPropertyValue('--marquee-duration')) || 58;
+            speed = reducedMotion.matches ? 0 : period / secs; // px por segundo
+        };
+        const render = () => {
+            offset = ((offset % period) + period) % period;
+            track.style.transform = `translateX(${-offset}px)`;
+        };
+
+        let last = performance.now();
+        const tick = now => {
+            const dt = Math.min((now - last) / 1000, 0.1);
+            last = now;
+            if (!dragging) offset += speed * dt;
+            render();
+            requestAnimationFrame(tick);
+        };
+
+        viewport.addEventListener('pointerdown', e => {
+            dragging = true;
+            dragStartX = e.clientX;
+            dragStartOffset = offset;
+            viewport.setPointerCapture(e.pointerId);
+            viewport.classList.add('is-dragging');
+        });
+        viewport.addEventListener('pointermove', e => {
+            if (dragging) offset = dragStartOffset - (e.clientX - dragStartX);
+        });
+        const endDrag = () => { dragging = false; viewport.classList.remove('is-dragging'); };
+        viewport.addEventListener('pointerup', endDrag);
+        viewport.addEventListener('pointercancel', endDrag);
+
+        measure();
+        addEventListener('resize', measure);
+        addEventListener('load', measure);
+        reducedMotion.addEventListener('change', measure);
+        requestAnimationFrame(tick);
     }
 </script>
 </body>

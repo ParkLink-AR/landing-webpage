@@ -27,12 +27,6 @@
             background: var(--white);
         }
 
-        .error-logo {
-            height: 72px;
-            width: auto;
-            margin-bottom: 48px;
-        }
-
         .error-code {
             font-family: 'Space Grotesk', sans-serif;
             font-size: clamp(5rem, 12vw, 9rem);
@@ -79,28 +73,27 @@
 </head>
 <body>
 
-<!-- NAV -->
+<!-- Topbar -->
+<div class="topbar">
+    <strong>ParkLink</strong> &nbsp;·&nbsp; App en fase de pruebas &nbsp;·&nbsp; Lanzamiento previsto 2026
+</div>
+
+<!-- NAV: icono recortado (solo el símbolo P) + wordmark de texto (solo las letras) -->
 <nav>
     <a href="index.html" class="nav-brand">
-        <div class="brand-mark">
-            <img src="assets/logos/logo-parklink.png" alt="">
-        </div>
-        <span class="brand-word">
-            <span class="p">Park</span><span class="l">Link</span>
-        </span>
+        <img src="assets/logos/logo-letras.png" alt="ParkLink" class="brand-logo">
     </a>
     <ul class="nav-links">
         <li><a href="index.html#sobre">Proyecto</a></li>
-        <li><a href="index.html#funciones">Funciones</a></li>
+        <li><a href="index.html#capturas">La app</a></li>
         <li><a href="index.html#equipo">Equipo</a></li>
+        <li><a href="index.html#funciones">Funciones</a></li>
         <li><a href="index.html#contacto" class="nav-cta">Contacto</a></li>
     </ul>
 </nav>
 
 <!-- ERROR CONTENT -->
 <main class="error-main">
-    <img src="assets/logos/logo-parklink.png" alt="ParkLink" class="error-logo">
-
     <div class="error-code">404</div>
     <h1 class="error-title">Esta página no existe</h1>
     <p class="error-desc">
@@ -118,22 +111,44 @@
 
 <!-- FOOTER -->
 <footer>
-    <div class="foot-inner">
+    <div class="foot-main">
         <div class="foot-brand">
-            <div class="foot-mark">
-                <img src="assets/logos/logo-parklink.png" alt="">
-            </div>
-            <span class="foot-word">
-                <span class="p">Park</span><span class="l">Link</span>
-            </span>
+            <img src="assets/logos/logo-letras-darkmode.png" alt="ParkLink" class="foot-logo">
+            <p class="foot-tagline">Estacionar en la ciudad, sin el caos. Conectamos conductores con cocheras disponibles en tiempo real.</p>
+            <span class="foot-status"><span class="foot-dot"></span>Lanzamiento previsto diciembre de 2026</span>
         </div>
-        <ul class="foot-nav">
-            <li><a href="index.html#sobre">Proyecto</a></li>
-            <li><a href="index.html#funciones">Funciones</a></li>
-            <li><a href="index.html#equipo">Equipo</a></li>
-            <li><a href="index.html#contacto">Contacto</a></li>
-        </ul>
+        <div class="foot-col">
+            <h5>Navegación</h5>
+            <ul>
+                <li><a href="index.html#sobre">Proyecto</a></li>
+                <li><a href="index.html#capturas">La app</a></li>
+                <li><a href="index.html#equipo">Equipo</a></li>
+                <li><a href="index.html#funciones">Funciones</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="foot-col">
+            <h5>Contacto</h5>
+            <a href="mailto:contacto@parklink.com.ar" class="foot-mail">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+                contacto@parklink.com.ar
+            </a>
+            <p class="foot-note">¿Tenés una cochera o querés sumarte al proyecto? Escribinos.</p>
+        </div>
+        <div class="foot-col">
+            <h5>Muy pronto en</h5>
+            <div class="foot-badges">
+                <img src="assets/logos/app-store-badge.svg" alt="App Store">
+                <img src="assets/logos/google-play-badge.png" alt="Google Play">
+            </div>
+        </div>
+    </div>
+    <div class="foot-bottom">
         <p class="foot-copy">© 2026 ParkLink. Todos los derechos reservados.</p>
+        <a href="#" class="foot-top">
+            Volver arriba
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+        </a>
     </div>
 </footer>
 
