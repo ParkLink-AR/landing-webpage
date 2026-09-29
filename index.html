@@ -100,7 +100,7 @@
         </div>
 
         <div class="about-phone reveal d2">
-            <img src="screenshots/mapa-busqueda.png" alt="Mapa de búsqueda ParkLink" class="phone-shot">
+            <img src="mockups/mockup-1.png" alt="Mapa de búsqueda ParkLink" class="phone-shot">
         </div>
     </div>
 </section>
@@ -115,35 +115,39 @@
     <div class="marquee-viewport">
         <div class="marquee-track" id="marqueeTrack">
             <div class="phone-item">
-                <img src="screenshots/mapa-busqueda.png" alt="Mapa de búsqueda" class="phone-shot">
+                <img src="mockups/mockup-1.png" alt="Mapa de búsqueda" class="phone-shot">
                 <div class="phone-cap"><h4>Mapa de búsqueda</h4><p>Cocheras agrupadas en el mapa con filtros por precio, distancia y horario.</p></div>
             </div>
             <div class="phone-item">
-                <img src="screenshots/resultados-fotos.png" alt="Resultados con fotos reales" class="phone-shot">
+                <img src="mockups/mockup-8.png" alt="Resultados con fotos reales" class="phone-shot">
                 <div class="phone-cap"><h4>Fichas con fotos reales</h4><p>Cada cochera con sus fotos, calificación y distancia exacta.</p></div>
             </div>
             <div class="phone-item">
-                <img src="screenshots/pago-mercadopago.png" alt="Pago con Mercado Pago" class="phone-shot">
+                <img src="mockups/mockup-17.png" alt="Pago con Mercado Pago" class="phone-shot">
                 <div class="phone-cap"><h4>Pago integrado</h4><p>Checkout con Mercado Pago sin salir de la app, con confirmación automática.</p></div>
             </div>
             <div class="phone-item">
-                <img src="screenshots/codigo-llegada.png" alt="Código de llegada" class="phone-shot">
+                <img src="mockups/mockup-14.png" alt="Código de llegada" class="phone-shot">
                 <div class="phone-cap"><h4>Código de llegada</h4><p>Un PIN de 4 dígitos valida en persona que el conductor llegó, evitando fraudes.</p></div>
             </div>
             <div class="phone-item">
-                <img src="screenshots/chat-reserva.png" alt="Chat de la reserva" class="phone-shot">
+                <img src="mockups/mockup-2.png" alt="Perfil del usuario" class="phone-shot">
+                <div class="phone-cap"><h4>Perfil verificado</h4><p>Cambiá entre modo conductor y propietario, y ajustá idioma, tema y tamaño de texto.</p></div>
+            </div>
+            <div class="phone-item">
+                <img src="mockups/mockup-13.png" alt="Chat de la reserva" class="phone-shot">
                 <div class="phone-cap"><h4>Chat por reserva</h4><p>Mensajería directa entre conductor y propietario para coordinar la llegada.</p></div>
             </div>
             <div class="phone-item">
-                <img src="screenshots/calendario-propietario.png" alt="Calendario del propietario" class="phone-shot">
+                <img src="mockups/mockup-4.png" alt="Calendario del propietario" class="phone-shot">
                 <div class="phone-cap"><h4>Calendario del propietario</h4><p>Todas las reservas del mes, de un vistazo.</p></div>
             </div>
             <div class="phone-item">
-                <img src="screenshots/publicar-cochera.png" alt="Publicar cochera" class="phone-shot">
+                <img src="mockups/mockup-10.png" alt="Publicar cochera" class="phone-shot">
                 <div class="phone-cap"><h4>Publicar una cochera</h4><p>Precio por tipo de vehículo, disponibilidad horaria y por estadía.</p></div>
             </div>
             <div class="phone-item">
-                <img src="screenshots/reputacion-resenas.png" alt="Reputación y reseñas" class="phone-shot">
+                <img src="mockups/mockup-15.png" alt="Reputación y reseñas" class="phone-shot">
                 <div class="phone-cap"><h4>Reputación</h4><p>Reseñas mutuas después de cada reserva, visibles en el perfil.</p></div>
             </div>
         </div>
@@ -293,14 +297,8 @@
 <!-- FOOTER -->
 <footer>
     <div class="foot-inner">
-        <!-- Ícono solo (símbolo P recortado) + wordmark de texto -->
         <div class="foot-brand">
-            <div class="foot-mark">
-                <img src="logo-parklink.png" alt="">
-            </div>
-            <span class="foot-word">
-                <span class="p">Park</span><span class="l">Link</span>
-            </span>
+            <img src="logo-letras-darkmode.png" alt="ParkLink" class="foot-logo">
         </div>
         <ul class="foot-nav">
             <li><a href="#sobre">Proyecto</a></li>
@@ -323,9 +321,10 @@
     // Duplica las capturas una vez para que el carrusel gire sin costura visible.
     const track = document.getElementById('marqueeTrack');
     if (track) {
+        const count = track.children.length;
         const clone = track.innerHTML;
         track.insertAdjacentHTML('beforeend', clone);
-        track.querySelectorAll('.phone-item:nth-child(n+9) img').forEach(img => img.setAttribute('aria-hidden', 'true'));
+        track.querySelectorAll(`.phone-item:nth-child(n+${count + 1}) img`).forEach(img => img.setAttribute('aria-hidden', 'true'));
     }
 </script>
 </body>

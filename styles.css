@@ -559,30 +559,12 @@ footer {
 .foot-brand {
     display: flex;
     align-items: center;
-    gap: 9px;
 }
-.foot-mark {
-    width: 26px;
-    height: 30px;
-    overflow: hidden;
-}
-.foot-mark img {
-    width: 62px;
-    height: auto;
-    margin-top: -1px;
-    margin-left: -18px;
-    filter: brightness(0) invert(1);
-    opacity: 0.65;
+.foot-logo {
+    height: 36px;
+    width: auto;
     display: block;
 }
-.foot-word {
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 700;
-    font-size: 0.95rem;
-    line-height: 1;
-}
-.foot-word .p { color: rgba(255,255,255,0.55); }
-.foot-word .l { color: rgba(26,173,175,0.65); }
 
 .foot-nav {
     display: flex;
