@@ -1,6 +1,6 @@
 :root {
-    --navy:       #042347;
-    --navy-dark:  #021528;
+    --navy:       #032152;
+    --navy-dark:  #02122E;
     --teal:       #168B8D;
     --teal-soft:  #1aadaf;
     --white:      #ffffff;
@@ -259,7 +259,7 @@ section { padding: 84px 7%; }
     display: block;
     width: 100%;
     height: auto;
-    filter: drop-shadow(0 30px 40px rgba(4,35,71,0.35));
+    filter: drop-shadow(0 30px 40px rgba(3,33,82,0.35));
 }
 
 .about-phone {
@@ -355,7 +355,7 @@ section { padding: 84px 7%; }
 }
 .func-card:hover {
     border-color: rgba(22,139,141,0.35);
-    box-shadow: 0 4px 16px rgba(4,35,71,0.06);
+    box-shadow: 0 4px 16px rgba(3,33,82,0.06);
 }
 .func-icon {
     width: 38px;
@@ -458,7 +458,7 @@ section { padding: 84px 7%; }
     text-align: center;
     transition: box-shadow 0.18s;
 }
-.team-card:hover { box-shadow: 0 4px 18px rgba(4,35,71,0.08); }
+.team-card:hover { box-shadow: 0 4px 18px rgba(3,33,82,0.08); }
 
 .avatar {
     width: 96px;
