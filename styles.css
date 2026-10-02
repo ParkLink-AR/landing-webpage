@@ -21,7 +21,6 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* ── TOPBAR ── */
 .topbar {
     background: var(--gray-bg);
     border-bottom: 1px solid var(--border);
@@ -33,7 +32,6 @@ body {
 }
 .topbar strong { color: var(--navy); }
 
-/* ── NAV ── */
 nav {
     position: sticky;
     top: 0;
@@ -84,7 +82,6 @@ nav {
 }
 .nav-cta:hover { background: var(--teal-soft) !important; }
 
-/* ── HERO ── */
 #hero {
     padding: 80px 7% 72px;
     background: var(--white);
@@ -125,7 +122,6 @@ nav {
     flex-wrap: wrap;
 }
 
-/* ── DESCARGA: badges oficiales de App Store / Google Play ── */
 .store-cta {
     margin-top: 30px;
 }
@@ -182,7 +178,6 @@ nav {
     color: var(--navy);
 }
 
-/* ── SHARED ── */
 section { padding: 84px 7%; }
 
 .tag {
@@ -207,7 +202,6 @@ section { padding: 84px 7%; }
     line-height: 1.75;
 }
 
-/* ── SOBRE ── */
 #sobre {
     background: var(--gray-bg);
     border-top: 1px solid var(--border);
@@ -254,7 +248,6 @@ section { padding: 84px 7%; }
     line-height: 1.6;
 }
 
-/* Real app screenshots (already framed with the iPhone 14 Pro bezel in the image itself) */
 .phone-shot {
     display: block;
     width: 100%;
@@ -271,7 +264,6 @@ section { padding: 84px 7%; }
     max-width: 340px;
 }
 
-/* ── CAPTURAS: infinite horizontal carousel ── */
 #capturas {
     background: linear-gradient(180deg, var(--navy) 0%, var(--navy-dark) 100%);
     text-align: center;
@@ -299,7 +291,6 @@ section { padding: 84px 7%; }
     --marquee-duration: 58s;
     animation: marquee-scroll var(--marquee-duration) linear infinite;
 }
-/* Con JS la tira se mueve por script y se puede arrastrar */
 .marquee-track.is-js { animation: none; will-change: transform; }
 .marquee-viewport:has(.is-js) { cursor: grab; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
 .marquee-viewport.is-dragging { cursor: grabbing; }
@@ -332,7 +323,6 @@ section { padding: 84px 7%; }
     line-height: 1.6;
 }
 
-/* ── FUNCIONES ── */
 #funciones { background: white; padding-top: 42px; }
 .func-hd {
     text-align: center;
@@ -382,7 +372,6 @@ section { padding: 84px 7%; }
     line-height: 1.65;
 }
 
-/* ── ROADMAP ── */
 #roadmap {
     background: var(--gray-bg);
     border-top: 1px solid var(--border);
@@ -436,7 +425,6 @@ section { padding: 84px 7%; }
 .step-conn.done { background: var(--teal); }
 .step-conn.pend { background: var(--gray-mid); }
 
-/* ── EQUIPO ── */
 #equipo { background: white; padding-bottom: 42px; }
 .team-hd {
     text-align: center;
@@ -503,7 +491,6 @@ section { padding: 84px 7%; }
 }
 .t-mail:hover { color: var(--teal); }
 
-/* ── CONTACTO ── */
 #contacto {
     background: white;
     text-align: center;
@@ -528,7 +515,6 @@ section { padding: 84px 7%; }
     box-shadow: 0 4px 14px rgba(22,139,141,0.22);
 }
 
-/* ── FOOTER ── */
 footer {
     position: relative;
     background:
@@ -662,7 +648,6 @@ footer::before {
 }
 .foot-top:hover { color: white; border-color: var(--teal-soft); }
 
-/* ── REVEAL ── */
 .reveal {
     opacity: 0;
     transform: translateY(18px);
@@ -678,7 +663,6 @@ footer::before {
     .foot-dot { animation: none; }
 }
 
-/* ── RESPONSIVE ── */
 @media (max-width: 940px) {
     .about-grid { grid-template-columns: 1fr; gap: 40px; }
     .about-phone { order: -1; }
