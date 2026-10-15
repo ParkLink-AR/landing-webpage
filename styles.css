@@ -80,7 +80,7 @@ nav {
 
 .hero-logo {
     display: block;
-    height: 115px;
+    height: 150px;
     width: auto;
     margin: 0 auto 28px;
 }
@@ -318,12 +318,36 @@ section { padding: 84px 7%; }
     max-width: 520px;
     margin: 0 auto 44px;
 }
+.func-track {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.func-track + .func-track { margin-top: 38px; }
+.func-track-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 16px;
+}
+.func-track-ic {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: rgba(22,139,141,0.1);
+    color: var(--teal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .func-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 14px;
-    max-width: 1000px;
-    margin: 0 auto;
 }
 .func-card {
     background: var(--gray-bg);
