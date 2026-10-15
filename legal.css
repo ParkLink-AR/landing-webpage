@@ -1,4 +1,4 @@
-/* Términos y Privacidad: una columna de lectura, con el mismo topbar/nav/footer del sitio. */
+/* Términos y Privacidad: una columna de lectura, con el mismo nav/footer del sitio. */
 body { min-height: 100vh; display: flex; flex-direction: column; }
 
 .legal-main {
