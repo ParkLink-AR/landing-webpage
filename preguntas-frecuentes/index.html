@@ -29,233 +29,279 @@
     </ul>
 </nav>
 
-<main class="faq-main">
-    <h1>Preguntas frecuentes</h1>
-    <p class="faq-lead">Todo lo que necesitás saber para reservar una cochera o publicar la tuya. ¿No encontrás tu respuesta? Escribinos a <a href="mailto:contacto@parklink.com.ar">contacto@parklink.com.ar</a>.</p>
-
-    <div class="faq-search">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-        <input type="search" id="faq-filter" placeholder="Buscá una pregunta (ej.: cancelar, pago, portón)" autocomplete="off">
+<section class="faq-hero">
+    <div class="faq-hero-in">
+        <p class="tag">Ayuda</p>
+        <h1 class="sh">Preguntas frecuentes</h1>
+        <p class="sp">Todo lo que necesitás saber para reservar una cochera o publicar la tuya: cómo funcionan las reservas, los pagos, el acceso y qué hacer si algo sale mal.</p>
+        <div class="faq-search">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+            <input type="search" id="faq-filter" placeholder="Buscá una pregunta (ej.: cancelar, pago, portón)" autocomplete="off" aria-label="Buscar una pregunta">
+        </div>
+        <div class="faq-chips" role="navigation" aria-label="Temas">
+            <a href="#faq-sobre" class="faq-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="12" y1="11" x2="12" y2="16"/><circle cx="12" cy="8" r="0.6" fill="currentColor"/></svg>Sobre ParkLink</a>
+            <a href="#faq-cuenta" class="faq-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Tu cuenta</a>
+            <a href="#faq-reservar" class="faq-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Reservar una cochera</a>
+            <a href="#faq-pagos" class="faq-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="2"/></svg>Pagos, cancelaciones y reembolsos</a>
+            <a href="#faq-problemas" class="faq-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>Si algo sale mal</a>
+            <a href="#faq-seguridad" class="faq-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/><polyline points="9 12 11 14 15 10"/></svg>Seguridad y confianza</a>
+            <a href="#faq-propietarios" class="faq-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>Para propietarios</a>
+        </div>
     </div>
-    <div class="faq-chips" role="navigation" aria-label="Temas">
-            <a href="#faq-sobre" class="faq-chip">Sobre ParkLink</a>
-            <a href="#faq-cuenta" class="faq-chip">Tu cuenta</a>
-            <a href="#faq-reservar" class="faq-chip">Reservar una cochera</a>
-            <a href="#faq-pagos" class="faq-chip">Pagos, cancelaciones y reembolsos</a>
-            <a href="#faq-problemas" class="faq-chip">Si algo sale mal</a>
-            <a href="#faq-seguridad" class="faq-chip">Seguridad y confianza</a>
-            <a href="#faq-propietarios" class="faq-chip">Para propietarios</a>
-    </div>
-    <p class="faq-empty" id="faq-empty" hidden>No encontramos preguntas con esas palabras. Escribinos a <a href="mailto:contacto@parklink.com.ar">contacto@parklink.com.ar</a> y te ayudamos.</p>
+</section>
 
-        <section class="faq-section" id="faq-sobre">
-            <h2><span class="faq-icon" aria-hidden="true">🅿️</span>Sobre ParkLink</h2>
-            <details class="faq-item">
-                <summary>¿Qué es ParkLink?</summary>
-                <div class="faq-answer"><p>Una app que conecta a quienes necesitan dónde estacionar con personas que tienen una cochera o un lugar libre. El conductor reserva y paga desde la app antes de salir; el propietario gana dinero con un espacio que no estaba usando.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>¿Cuánto cuesta usar la app?</summary>
-                <div class="faq-answer"><p>Descargarla y crear tu cuenta es gratis. Solo pagás cuando reservás: el precio que ves antes de pagar es el final e incluye la comisión de ParkLink. A los propietarios no se les descuenta nada de lo que cobran: reciben el precio que fijaron.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>¿En qué ciudades funciona?</summary>
-                <div class="faq-answer"><p>En cualquier lugar de la Argentina. Buscás por dirección o por tu ubicación y ves las cocheras publicadas en esa zona. La cantidad de cocheras depende de cuántos propietarios se sumen en cada lugar.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>¿Ya está disponible?</summary>
-                <div class="faq-answer"><p>La app está en fase de pruebas y el lanzamiento está previsto para diciembre de 2026. Si querés enterarte antes, escribinos a <a href="mailto:contacto@parklink.com.ar">contacto@parklink.com.ar</a>.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>¿Necesito una cuenta para cada cosa: buscar y ofrecer mi cochera?</summary>
-                <div class="faq-answer"><p>No. Con una sola cuenta podés usar la app como conductor y como propietario, y cambiar de modo cuando quieras desde Perfil → Modo.</p></div>
-            </details>
-        </section>
+<section class="faq-body">
+    <p class="faq-empty sp" id="faq-empty" hidden>No encontramos preguntas con esas palabras. Escribinos a <a href="mailto:contacto@parklink.com.ar">contacto@parklink.com.ar</a> y te ayudamos.</p>
+        <div class="faq-group reveal" id="faq-sobre">
+            <div class="func-track-label">
+                <span class="func-track-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><line x1="12" y1="11" x2="12" y2="16"/><circle cx="12" cy="8" r="0.6" fill="currentColor"/></svg></span>
+                Sobre ParkLink
+            </div>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary><span>¿Qué es ParkLink?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Una app que conecta a quienes necesitan dónde estacionar con personas que tienen una cochera o un lugar libre. El conductor reserva y paga desde la app antes de salir; el propietario gana dinero con un espacio que no estaba usando.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>¿Cuánto cuesta usar la app?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Descargarla y crear tu cuenta es gratis. Solo pagás cuando reservás: el precio que ves antes de pagar es el final e incluye la comisión de ParkLink. A los propietarios no se les descuenta nada de lo que cobran: reciben el precio que fijaron.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>¿En qué ciudades funciona?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>En cualquier lugar de la Argentina. Buscás por dirección o por tu ubicación y ves las cocheras publicadas en esa zona. La cantidad de cocheras depende de cuántos propietarios se sumen en cada lugar.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>¿Ya está disponible?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>La app está en fase de pruebas y el lanzamiento está previsto para diciembre de 2026. Si querés enterarte antes, escribinos a <a href="mailto:contacto@parklink.com.ar">contacto@parklink.com.ar</a>.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>¿Necesito una cuenta para cada cosa: buscar y ofrecer mi cochera?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>No. Con una sola cuenta podés usar la app como conductor y como propietario, y cambiar de modo cuando quieras desde Perfil → Modo.</p></div>
+                </details>
+            </div>
+        </div>
 
-        <section class="faq-section" id="faq-cuenta">
-            <h2><span class="faq-icon" aria-hidden="true">👤</span>Tu cuenta</h2>
-            <details class="faq-item">
-                <summary>¿Qué necesito para registrarme?</summary>
-                <div class="faq-answer"><p>Ser mayor de 18 años, un correo y un teléfono (los verificamos con un código), tu DNI y tu fecha de nacimiento. Al registrarte aceptás los <a href="/terminos/">Términos y Condiciones</a> y la <a href="/privacidad/">Política de Privacidad</a>.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>¿Por qué me piden el DNI?</summary>
-                <div class="faq-answer"><p>Para que cada cuenta corresponda a una persona real y una misma persona no tenga varias cuentas. Ayuda a la confianza entre conductores y propietarios. Tu DNI no se muestra a otros usuarios.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>Me olvidé la contraseña, ¿qué hago?</summary>
-                <div class="faq-answer"><p>En la pantalla de inicio de sesión tocá «Olvidé mi contraseña» y seguí los pasos: te mandamos un código al correo.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>¿Puedo cambiar mi correo o mi teléfono?</summary>
-                <div class="faq-answer"><p>Sí, desde Perfil → Editar perfil. El dato nuevo se confirma con un código que te enviamos ahí.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>¿Cómo elimino mi cuenta?</summary>
-                <div class="faq-answer"><p>Desde Perfil → Editar perfil → Eliminar cuenta. Tenés 7 días para arrepentirte iniciando sesión; después tus datos personales se borran o se anonimizan. Si tenías reservas futuras, se cancelan con reembolso. Más detalles en la <a href="/privacidad/#eliminacion">Política de Privacidad</a>.</p></div>
-            </details>
-        </section>
+        <div class="faq-group reveal" id="faq-cuenta">
+            <div class="func-track-label">
+                <span class="func-track-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span>
+                Tu cuenta
+            </div>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary><span>¿Qué necesito para registrarme?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Ser mayor de 18 años, un correo y un teléfono (los verificamos con un código), tu DNI y tu fecha de nacimiento. Al registrarte aceptás los <a href="/terminos/">Términos y Condiciones</a> y la <a href="/privacidad/">Política de Privacidad</a>.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>¿Por qué me piden el DNI?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Para que cada cuenta corresponda a una persona real y una misma persona no tenga varias cuentas. Ayuda a la confianza entre conductores y propietarios. Tu DNI no se muestra a otros usuarios.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>Me olvidé la contraseña, ¿qué hago?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>En la pantalla de inicio de sesión tocá «Olvidé mi contraseña» y seguí los pasos: te mandamos un código al correo.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>¿Puedo cambiar mi correo o mi teléfono?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Sí, desde Perfil → Editar perfil. El dato nuevo se confirma con un código que te enviamos ahí.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>¿Cómo elimino mi cuenta?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Desde Perfil → Editar perfil → Eliminar cuenta. Tenés 7 días para arrepentirte iniciando sesión; después tus datos personales se borran o se anonimizan. Si tenías reservas futuras, se cancelan con reembolso. Más detalles en la <a href="/privacidad/#eliminacion">Política de Privacidad</a>.</p></div>
+                </details>
+            </div>
+        </div>
 
-        <section class="faq-section" id="faq-reservar">
-            <h2><span class="faq-icon" aria-hidden="true">🚗</span>Reservar una cochera</h2>
-            <details class="faq-item">
-                <summary>¿Cómo reservo?</summary>
-                <div class="faq-answer"><p>Buscá por dirección o en el mapa, elegí una cochera, el día y el horario (o las fechas, si es una estadía), y pagá con Mercado Pago. La app te propone sola el primer horario libre.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>¿Qué diferencia hay entre reservar por hora y por estadía?</summary>
-                <div class="faq-answer"><p><strong>Por hora</strong> es para unas horas: elegís inicio y fin, incluso cruzando la medianoche o abarcando varios días. <strong>Por estadía</strong> es para dejar el auto días, semanas o meses: se cobra por día, semana o mes y entrás y salís a la misma hora. Cada cochera muestra cuál de las dos ofrece.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>¿Cuándo queda confirmada mi reserva?</summary>
-                <div class="faq-answer"><p>Después de pagar, el propietario tiene que aceptarla. Te avisamos apenas lo hace. Si la rechaza o no responde dentro de las 24 horas, la reserva se cancela y te devolvemos el total.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>¿Para qué sirve el código de llegada?</summary>
-                <div class="faq-answer"><p>Cuando la reserva queda confirmada, la app te muestra un código de 4 números. Al llegar se lo decís al propietario y él lo carga en su app: así queda registrado que llegaste. Se puede cargar desde 30 minutos antes del inicio.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>¿Cómo encuentro la cochera y cómo entro?</summary>
-                <div class="faq-answer"><p>Desde tu reserva tenés «Cómo llegar», que abre el mapa con la dirección. Una vez aceptada la reserva, también ves «Cómo entrar»: las instrucciones que dejó el propietario (portón, piso, número de lugar, a quién avisar).</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>¿Tengo que indicar con qué vehículo voy?</summary>
-                <div class="faq-answer"><p>Depende de la cochera. Algunas lo piden, y algunas cobran distinto según el tipo de vehículo (auto, SUV, camioneta, moto o bici). Cargás tus vehículos una vez en tu perfil y los elegís al reservar; el propietario ve la patente para reconocerte.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>Me demoro: ¿puedo quedarme más tiempo?</summary>
-                <div class="faq-answer"><p>Sí, si la cochera sigue libre. Desde tu reserva tocá «Extender reserva», elegí hasta qué hora y pagás solo las horas que agregás. Si alguien más reservó a continuación, la app te muestra hasta cuándo se puede extender.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>¿Puedo reservar a último momento?</summary>
-                <div class="faq-answer"><p>Sí, siempre que la cochera tenga lugar libre en ese horario. Igual tiene que aceptarla el propietario.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>¿Puedo reservar el mismo lugar todos los días?</summary>
-                <div class="faq-answer"><p>Para varios días seguidos usá una estadía (por días, semanas o meses). Las reservas que se repiten solo algunos días u horarios (por ejemplo, de lunes a viernes de 9 a 18) todavía no están disponibles: por ahora se reservan una por una.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>¿Puedo volver a reservar una cochera que ya usé?</summary>
-                <div class="faq-answer"><p>Sí. En una reserva terminada tocá «Volver a reservar»: se abre la cochera con la misma duración y el mismo vehículo.</p></div>
-            </details>
-        </section>
+        <div class="faq-group reveal" id="faq-reservar">
+            <div class="func-track-label">
+                <span class="func-track-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
+                Reservar una cochera
+            </div>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary><span>¿Cómo reservo?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Buscá por dirección o en el mapa, elegí una cochera, el día y el horario (o las fechas, si es una estadía), y pagá con Mercado Pago. La app te propone sola el primer horario libre.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>¿Qué diferencia hay entre reservar por hora y por estadía?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p><strong>Por hora</strong> es para unas horas: elegís inicio y fin, incluso cruzando la medianoche o abarcando varios días. <strong>Por estadía</strong> es para dejar el auto días, semanas o meses: se cobra por día, semana o mes y entrás y salís a la misma hora. Cada cochera muestra cuál de las dos ofrece.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>¿Cuándo queda confirmada mi reserva?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Después de pagar, el propietario tiene que aceptarla. Te avisamos apenas lo hace. Si la rechaza o no responde dentro de las 24 horas, la reserva se cancela y te devolvemos el total.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>¿Para qué sirve el código de llegada?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Cuando la reserva queda confirmada, la app te muestra un código de 4 números. Al llegar se lo decís al propietario y él lo carga en su app: así queda registrado que llegaste. Se puede cargar desde 30 minutos antes del inicio.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>¿Cómo encuentro la cochera y cómo entro?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Desde tu reserva tenés «Cómo llegar», que abre el mapa con la dirección. Una vez aceptada la reserva, también ves «Cómo entrar»: las instrucciones que dejó el propietario (portón, piso, número de lugar, a quién avisar).</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>¿Tengo que indicar con qué vehículo voy?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Depende de la cochera. Algunas lo piden, y algunas cobran distinto según el tipo de vehículo (auto, SUV, camioneta, moto o bici). Cargás tus vehículos una vez en tu perfil y los elegís al reservar; el propietario ve la patente para reconocerte.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>Me demoro: ¿puedo quedarme más tiempo?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Sí, si la cochera sigue libre. Desde tu reserva tocá «Extender reserva», elegí hasta qué hora y pagás solo las horas que agregás. Si alguien más reservó a continuación, la app te muestra hasta cuándo se puede extender.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>¿Puedo reservar a último momento?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Sí, siempre que la cochera tenga lugar libre en ese horario. Igual tiene que aceptarla el propietario.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>¿Puedo reservar el mismo lugar todos los días?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Para varios días seguidos usá una estadía (por días, semanas o meses). Las reservas que se repiten solo algunos días u horarios (por ejemplo, de lunes a viernes de 9 a 18) todavía no están disponibles: por ahora se reservan una por una.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>¿Puedo volver a reservar una cochera que ya usé?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Sí. En una reserva terminada tocá «Volver a reservar»: se abre la cochera con la misma duración y el mismo vehículo.</p></div>
+                </details>
+            </div>
+        </div>
 
-        <section class="faq-section" id="faq-pagos">
-            <h2><span class="faq-icon" aria-hidden="true">💳</span>Pagos, cancelaciones y reembolsos</h2>
-            <details class="faq-item">
-                <summary>¿Cómo pago?</summary>
-                <div class="faq-answer"><p>Con Mercado Pago, con los medios que ofrece (tarjeta de crédito o débito, dinero en cuenta, etc.). ParkLink no guarda los datos de tu tarjeta.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>¿Cuándo se cobra?</summary>
-                <div class="faq-answer"><p>Al reservar. Si el propietario rechaza la reserva o no responde a tiempo, te devolvemos el total.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>¿Puedo cancelar? ¿Me devuelven la plata?</summary>
-                <div class="faq-answer"><ul><li><strong>Hasta 1 hora antes del inicio:</strong> te devolvemos el total.</li><li><strong>En la última hora antes del inicio:</strong> te devolvemos la mitad.</li><li><strong>Una vez que empezó</strong> no se puede cancelar.</li><li>Si el propietario todavía no la aceptó, podés cancelarla antes del inicio y te devolvemos el total.</li><li>Si el propietario cancela o rechaza, te devolvemos el total.</li></ul></div>
-            </details>
-            <details class="faq-item">
-                <summary>¿Cuánto tarda en llegar un reembolso?</summary>
-                <div class="faq-answer"><p>Lo hacemos al mismo medio de pago a través de Mercado Pago. El tiempo de acreditación depende de Mercado Pago y de tu medio (con tarjeta puede verse en el resumen siguiente). Desde la reserva ves en qué estado está.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>¿Me dan comprobante?</summary>
-                <div class="faq-answer"><p>Sí. Desde la reserva, en la sección Pago, tocá «Descargar comprobante» y te genera un PDF. Es un resumen de tu reserva y tu pago, no una factura.</p></div>
-            </details>
-        </section>
+        <div class="faq-group reveal" id="faq-pagos">
+            <div class="func-track-label">
+                <span class="func-track-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="2"/></svg></span>
+                Pagos, cancelaciones y reembolsos
+            </div>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary><span>¿Cómo pago?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Con Mercado Pago, con los medios que ofrece (tarjeta de crédito o débito, dinero en cuenta, etc.). ParkLink no guarda los datos de tu tarjeta.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>¿Cuándo se cobra?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Al reservar. Si el propietario rechaza la reserva o no responde a tiempo, te devolvemos el total.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>¿Puedo cancelar? ¿Me devuelven la plata?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><ul><li><strong>Hasta 1 hora antes del inicio:</strong> te devolvemos el total.</li><li><strong>En la última hora antes del inicio:</strong> te devolvemos la mitad.</li><li><strong>Una vez que empezó</strong> no se puede cancelar.</li><li>Si el propietario todavía no la aceptó, podés cancelarla antes del inicio y te devolvemos el total.</li><li>Si el propietario cancela o rechaza, te devolvemos el total.</li></ul></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>¿Cuánto tarda en llegar un reembolso?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Lo hacemos al mismo medio de pago a través de Mercado Pago. El tiempo de acreditación depende de Mercado Pago y de tu medio (con tarjeta puede verse en el resumen siguiente). Desde la reserva ves en qué estado está.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>¿Me dan comprobante?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Sí. Desde la reserva, en la sección Pago, tocá «Descargar comprobante» y te genera un PDF. Es un resumen de tu reserva y tu pago, no una factura.</p></div>
+                </details>
+            </div>
+        </div>
 
-        <section class="faq-section" id="faq-problemas">
-            <h2><span class="faq-icon" aria-hidden="true">🛟</span>Si algo sale mal</h2>
-            <details class="faq-item">
-                <summary>Llegué y la cochera estaba ocupada, ¿qué hago?</summary>
-                <div class="faq-answer"><p>Desde tu reserva tocá «Reportar un problema» → «La cochera estaba ocupada». Lo revisa el equipo de ParkLink y, si corresponde, te devolvemos el dinero. También podés escribirle al propietario por el chat de la reserva.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>¿Cómo evitan que una reserva se pise con la anterior?</summary>
-                <div class="faq-answer"><p>Entre una reserva y la siguiente de una misma cochera siempre quedan al menos 15 minutos libres, para que un atraso corto no afecte al próximo. Además, el propietario acepta cada reserva y elige qué días y horarios ofrece.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>Soy propietario y el conductor no vino o se pasó del horario</summary>
-                <div class="faq-answer"><p>Desde la reserva tocá «Reportar un problema» y elegí lo que pasó. Si el conductor no llegó, sin el código de llegada ParkLink revisa la reserva antes de pagártela. Por ahora el tiempo extra no se cobra automáticamente: lo resolvemos caso por caso.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>¿Cómo contacto a la otra persona?</summary>
-                <div class="faq-answer"><p>Por el chat de la reserva, que se habilita una vez pagada. No hace falta compartir teléfonos.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>¿Cómo contacto a ParkLink?</summary>
-                <div class="faq-answer"><p>Desde la reserva, en «Ayuda», abrís un ticket y te respondemos ahí. Para cualquier otra consulta, escribinos a <a href="mailto:contacto@parklink.com.ar">contacto@parklink.com.ar</a>.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>¿Cómo denuncio a alguien o algo?</summary>
-                <div class="faq-answer"><p>Con «Denunciar» en la cochera, en el perfil de la persona o en una reseña, o con «Reportar un problema» en una reserva. La otra persona no sabe quién la denunció. ParkLink revisa cada caso y puede suspender cocheras o cuentas.</p></div>
-            </details>
-        </section>
+        <div class="faq-group reveal" id="faq-problemas">
+            <div class="func-track-label">
+                <span class="func-track-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>
+                Si algo sale mal
+            </div>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary><span>Llegué y la cochera estaba ocupada, ¿qué hago?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Desde tu reserva tocá «Reportar un problema» → «La cochera estaba ocupada». Lo revisa el equipo de ParkLink y, si corresponde, te devolvemos el dinero. También podés escribirle al propietario por el chat de la reserva.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>¿Cómo evitan que una reserva se pise con la anterior?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Entre una reserva y la siguiente de una misma cochera siempre quedan al menos 15 minutos libres, para que un atraso corto no afecte al próximo. Además, el propietario acepta cada reserva y elige qué días y horarios ofrece.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>Soy propietario y el conductor no vino o se pasó del horario</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Desde la reserva tocá «Reportar un problema» y elegí lo que pasó. Si el conductor no llegó, sin el código de llegada ParkLink revisa la reserva antes de pagártela. Por ahora el tiempo extra no se cobra automáticamente: lo resolvemos caso por caso.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>¿Cómo contacto a la otra persona?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Por el chat de la reserva, que se habilita una vez pagada. No hace falta compartir teléfonos.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>¿Cómo contacto a ParkLink?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Desde la reserva, en «Ayuda», abrís un ticket y te respondemos ahí. Para cualquier otra consulta, escribinos a <a href="mailto:contacto@parklink.com.ar">contacto@parklink.com.ar</a>.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>¿Cómo denuncio a alguien o algo?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Con «Denunciar» en la cochera, en el perfil de la persona o en una reseña, o con «Reportar un problema» en una reserva. La otra persona no sabe quién la denunció. ParkLink revisa cada caso y puede suspender cocheras o cuentas.</p></div>
+                </details>
+            </div>
+        </div>
 
-        <section class="faq-section" id="faq-seguridad">
-            <h2><span class="faq-icon" aria-hidden="true">🔒</span>Seguridad y confianza</h2>
-            <details class="faq-item">
-                <summary>¿Es seguro dejar mi auto en una cochera particular?</summary>
-                <div class="faq-answer"><p>Cada cochera se revisa antes de aparecer en la app; podemos pedir documentación y rechazarla. Conductores y propietarios se califican después de cada reserva, y las denuncias pueden terminar en la suspensión de la cochera o de la cuenta. Igual, ParkLink no es un estacionamiento ni el depositario del vehículo: el uso de la cochera es un acuerdo entre las partes (ver los <a href="/terminos/#responsabilidad">Términos</a>).</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>¿Tienen seguro para los autos?</summary>
-                <div class="faq-answer"><p>Hoy ParkLink no ofrece un seguro propio. Te recomendamos revisar qué cubre tu póliza mientras el auto está estacionado. Ante un problema, reportalo desde la reserva y lo vemos con las dos partes.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>¿Cómo sé si puedo confiar en el otro usuario?</summary>
-                <div class="faq-answer"><p>Cada perfil muestra sus calificaciones y reseñas como conductor y como propietario. Todas las cuentas verifican su correo y su teléfono, y cargan su DNI.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>¿Qué ven los demás de mí?</summary>
-                <div class="faq-answer"><p>Tu nombre, tu foto y tus reseñas. En una reserva, el propietario ve además tu vehículo y su patente. Tu DNI, correo y teléfono no se muestran. Detalles en la <a href="/privacidad/">Política de Privacidad</a>.</p></div>
-            </details>
-        </section>
+        <div class="faq-group reveal" id="faq-seguridad">
+            <div class="func-track-label">
+                <span class="func-track-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/><polyline points="9 12 11 14 15 10"/></svg></span>
+                Seguridad y confianza
+            </div>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary><span>¿Es seguro dejar mi auto en una cochera particular?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Cada cochera se revisa antes de aparecer en la app; podemos pedir documentación y rechazarla. Conductores y propietarios se califican después de cada reserva, y las denuncias pueden terminar en la suspensión de la cochera o de la cuenta. Igual, ParkLink no es un estacionamiento ni el depositario del vehículo: el uso de la cochera es un acuerdo entre las partes (ver los <a href="/terminos/#responsabilidad">Términos</a>).</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>¿Tienen seguro para los autos?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Hoy ParkLink no ofrece un seguro propio. Te recomendamos revisar qué cubre tu póliza mientras el auto está estacionado. Ante un problema, reportalo desde la reserva y lo vemos con las dos partes.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>¿Cómo sé si puedo confiar en el otro usuario?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Cada perfil muestra sus calificaciones y reseñas como conductor y como propietario. Todas las cuentas verifican su correo y su teléfono, y cargan su DNI.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>¿Qué ven los demás de mí?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Tu nombre, tu foto y tus reseñas. En una reserva, el propietario ve además tu vehículo y su patente. Tu DNI, correo y teléfono no se muestran. Detalles en la <a href="/privacidad/">Política de Privacidad</a>.</p></div>
+                </details>
+            </div>
+        </div>
 
-        <section class="faq-section" id="faq-propietarios">
-            <h2><span class="faq-icon" aria-hidden="true">🏠</span>Para propietarios</h2>
-            <details class="faq-item">
-                <summary>¿Cómo publico mi cochera?</summary>
-                <div class="faq-answer"><p>Pasá a modo propietario (Perfil → Modo), tocá «Publicar cochera» y cargá la dirección, fotos, qué vehículos entran, horarios y precios. La revisamos antes de que aparezca en las búsquedas y te avisamos cuando está publicada.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>¿Qué necesito para publicarla?</summary>
-                <div class="faq-answer"><p>Tener derecho a ofrecerla (ser dueño, inquilino autorizado o tener permiso) y que alquilarla no vaya contra ninguna norma, contrato ni el reglamento de tu edificio. En muchos consorcios no está permitido el uso de cocheras por personas ajenas: consultalo antes de publicar.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>¿Cuánto cobro y cuánto se queda ParkLink?</summary>
-                <div class="faq-answer"><p>Vos fijás el precio por hora y, si querés, por día, semana y mes (también podés cobrar distinto según el vehículo). Recibís ese precio completo: la comisión de ParkLink se suma aparte, en lo que paga el conductor.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>¿Cuándo y cómo me pagan?</summary>
-                <div class="faq-answer"><p>Cargás tu CBU o CVU en Perfil → Datos de cobro. Lo de cada reserva terminada queda disponible para liquidarse pasadas 24 horas y ParkLink te lo transfiere a esa cuenta. Ves cada liquidación en Perfil → Mis liquidaciones y te avisamos cada vez que transferimos.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>¿Elijo yo quién usa mi cochera?</summary>
-                <div class="faq-answer"><p>Sí. Cada reserva te llega como solicitud y tenés 24 horas para aceptarla o rechazarla. Antes de decidir ves el perfil y las calificaciones del conductor, y su vehículo.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>¿Puedo elegir días y horarios?</summary>
-                <div class="faq-answer"><p>Sí. Configurás el horario de cada día de la semana y podés cerrar días puntuales (vacaciones, días que la usás) desde «Fechas bloqueadas». También podés pausar la cochera cuando quieras.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>¿Tengo que estar para abrirle al conductor?</summary>
-                <div class="faq-answer"><p>El conductor necesita poder entrar, y al llegar te dice su código de llegada para que lo cargues en la app. En «Cómo entrar» explicás el acceso (portón, encargado, a quién avisar); solo lo ve el conductor de una reserva que aceptaste. Si no vas a estar, coordiná que alguien lo reciba.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>Tengo lugar para varios autos, ¿puedo publicarlos juntos?</summary>
-                <div class="faq-answer"><p>Sí. Al publicar indicás cuántos lugares tiene: se pueden reservar tantos a la vez como lugares haya.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>¿Puedo cancelar una reserva que ya acepté?</summary>
-                <div class="faq-answer"><p>Sí, antes de que empiece, explicando el motivo. El conductor recibe el reembolso total. Cancelar reservas aceptadas queda registrado y, si se repite, puede llevar a la suspensión de la cochera.</p></div>
-            </details>
-            <details class="faq-item">
-                <summary>¿Tengo que pagar impuestos por lo que cobro?</summary>
-                <div class="faq-answer"><p>Los ingresos que obtenés por alquilar tu cochera son tuyos, y cumplir con tus obligaciones impositivas te corresponde a vos. Si tenés dudas, consultalo con un contador.</p></div>
-            </details>
-        </section>
-</main>
+        <div class="faq-group reveal" id="faq-propietarios">
+            <div class="func-track-label">
+                <span class="func-track-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg></span>
+                Para propietarios
+            </div>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary><span>¿Cómo publico mi cochera?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Pasá a modo propietario (Perfil → Modo), tocá «Publicar cochera» y cargá la dirección, fotos, qué vehículos entran, horarios y precios. La revisamos antes de que aparezca en las búsquedas y te avisamos cuando está publicada.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>¿Qué necesito para publicarla?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Tener derecho a ofrecerla (ser dueño, inquilino autorizado o tener permiso) y que alquilarla no vaya contra ninguna norma, contrato ni el reglamento de tu edificio. En muchos consorcios no está permitido el uso de cocheras por personas ajenas: consultalo antes de publicar.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>¿Cuánto cobro y cuánto se queda ParkLink?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Vos fijás el precio por hora y, si querés, por día, semana y mes (también podés cobrar distinto según el vehículo). Recibís ese precio completo: la comisión de ParkLink se suma aparte, en lo que paga el conductor.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>¿Cuándo y cómo me pagan?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Cargás tu CBU o CVU en Perfil → Datos de cobro. Lo de cada reserva terminada queda disponible para liquidarse pasadas 24 horas y ParkLink te lo transfiere a esa cuenta. Ves cada liquidación en Perfil → Mis liquidaciones y te avisamos cada vez que transferimos.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>¿Elijo yo quién usa mi cochera?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Sí. Cada reserva te llega como solicitud y tenés 24 horas para aceptarla o rechazarla. Antes de decidir ves el perfil y las calificaciones del conductor, y su vehículo.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>¿Puedo elegir días y horarios?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Sí. Configurás el horario de cada día de la semana y podés cerrar días puntuales (vacaciones, días que la usás) desde «Fechas bloqueadas». También podés pausar la cochera cuando quieras.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>¿Tengo que estar para abrirle al conductor?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>El conductor necesita poder entrar, y al llegar te dice su código de llegada para que lo cargues en la app. En «Cómo entrar» explicás el acceso (portón, encargado, a quién avisar); solo lo ve el conductor de una reserva que aceptaste. Si no vas a estar, coordiná que alguien lo reciba.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>Tengo lugar para varios autos, ¿puedo publicarlos juntos?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Sí. Al publicar indicás cuántos lugares tiene: se pueden reservar tantos a la vez como lugares haya.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>¿Puedo cancelar una reserva que ya acepté?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Sí, antes de que empiece, explicando el motivo. El conductor recibe el reembolso total. Cancelar reservas aceptadas queda registrado y, si se repite, puede llevar a la suspensión de la cochera.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span>¿Tengo que pagar impuestos por lo que cobro?</span><span class="faq-toggle" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span></summary>
+                    <div class="faq-answer"><p>Los ingresos que obtenés por alquilar tu cochera son tuyos, y cumplir con tus obligaciones impositivas te corresponde a vos. Si tenés dudas, consultalo con un contador.</p></div>
+                </details>
+            </div>
+        </div>
+</section>
+
+<section class="faq-contact">
+    <p class="tag">Contacto</p>
+    <h2 class="sh">¿Te quedó alguna duda?</h2>
+    <p class="sp">Escribinos y te respondemos. Si es sobre una reserva, también podés abrir un ticket desde la reserva en la app.</p>
+    <a href="mailto:contacto@parklink.com.ar" class="cta-mail"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>contacto@parklink.com.ar</a>
+</section>
 
 <footer>
     <div class="foot-main">
@@ -308,8 +354,9 @@
     </div>
 </footer>
 
+<script src="/script.js"></script>
 <script>
-// Filtra las preguntas mientras se escribe: abre las que coinciden y oculta las secciones vacías.
+// Filtra las preguntas mientras se escribe: abre las que coinciden y oculta los temas vacíos.
 (function () {
     var input = document.getElementById('faq-filter');
     var empty = document.getElementById('faq-empty');
@@ -319,16 +366,17 @@
     input.addEventListener('input', function () {
         var query = normalize(input.value.trim());
         var anyVisible = false;
-        document.querySelectorAll('.faq-section').forEach(function (section) {
-            var sectionVisible = false;
-            section.querySelectorAll('.faq-item').forEach(function (item) {
+        document.querySelectorAll('.faq-group').forEach(function (group) {
+            var groupVisible = false;
+            group.querySelectorAll('.faq-item').forEach(function (item) {
                 var match = !query || normalize(item.textContent).indexOf(query) !== -1;
                 item.hidden = !match;
                 item.open = !!query && match;
-                sectionVisible = sectionVisible || match;
+                groupVisible = groupVisible || match;
             });
-            section.hidden = !sectionVisible;
-            anyVisible = anyVisible || sectionVisible;
+            group.hidden = !groupVisible;
+            group.classList.add('visible');
+            anyVisible = anyVisible || groupVisible;
         });
         empty.hidden = anyVisible;
     });
