@@ -1,3 +1,34 @@
+const preloader = document.getElementById('preloader');
+if (preloader) {
+    const bar = document.getElementById('preloaderProgress');
+    const imgs = [...document.images];
+    let loaded = 0;
+    const step = () => { bar.style.width = `${(++loaded / imgs.length) * 100}%`; };
+    imgs.forEach(img => {
+        if (img.complete) step();
+        else {
+            img.addEventListener('load', step, { once: true });
+            img.addEventListener('error', step, { once: true });
+        }
+    });
+
+    const start = performance.now();
+    let finished = false;
+    const finish = () => {
+        if (finished) return;
+        finished = true;
+        bar.style.width = '100%';
+        setTimeout(() => {
+            preloader.classList.add('is-done');
+            document.documentElement.classList.remove('is-loading');
+            setTimeout(() => preloader.remove(), 1000);
+        }, Math.max(0, 900 - (performance.now() - start)));
+    };
+    if (document.readyState === 'complete') finish();
+    else addEventListener('load', finish);
+    setTimeout(finish, 8000);
+}
+
 const io = new IntersectionObserver(
     entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
     { threshold: 0.1 }
