@@ -4,6 +4,16 @@ const io = new IntersectionObserver(
 );
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
+const navEl = document.querySelector('nav');
+const heroLogo = document.querySelector('.hero-logo');
+if (navEl && heroLogo) {
+    const navObserver = new IntersectionObserver(
+        ([entry]) => navEl.classList.toggle('nav-scrolled', !entry.isIntersecting),
+        { threshold: 0 }
+    );
+    navObserver.observe(heroLogo);
+}
+
 const track = document.getElementById('marqueeTrack');
 if (track) {
     const count = track.children.length;
