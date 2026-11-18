@@ -905,9 +905,42 @@ footer::before {
     outline: none;
     resize: vertical;
     transition: border-color 0.18s;
+    background: white;
 }
 .feedback-form input:focus,
 .feedback-form textarea:focus { border-color: var(--teal); }
+
+.feedback-field-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--navy);
+    display: block;
+    margin-bottom: 6px;
+}
+.feedback-checks {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.feedback-check {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.86rem;
+    font-weight: 400 !important;
+    color: var(--text);
+    padding: 9px 12px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color 0.18s, background 0.18s;
+}
+.feedback-check:has(input:checked) {
+    border-color: var(--teal);
+    background: rgba(22,139,141,0.06);
+}
+.feedback-check input { width: 16px; height: 16px; accent-color: var(--teal); flex-shrink: 0; }
 .feedback-form .btn {
     margin-top: 2px;
     width: 100%;

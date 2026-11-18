@@ -9,3 +9,9 @@ database_id = "e695cd72-4bbc-4a5d-ba2c-732e8e3ba181"
 
 [vars]
 ALLOWED_ORIGINS = "https://www.parklink.com.ar,https://parklink.com.ar,https://parklink-ar.github.io"
+DIGEST_SENDER = "felicitaciones@mail.parklink.com.ar"
+DIGEST_RECIPIENTS = "svarga@fi.uba.ar,tbaez@fi.uba.ar,fluzzi@fi.uba.ar,sadominguez@fi.uba.ar"
+
+# 00:00 hora Argentina (UTC-3) = 03:00 UTC
+[triggers]
+crons = ["0 3 * * *"]

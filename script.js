@@ -35,8 +35,9 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
     form.addEventListener('submit', async e => {
         e.preventDefault();
         const nombre = form.nombre.value.trim();
+        const vinePor = [...form.querySelectorAll('input[name="vine_por"]:checked')].map(el => el.value);
         const comentario = form.comentario.value.trim();
-        if (!nombre || !comentario) return;
+        if (!nombre || !vinePor.length || !comentario) return;
 
         submitBtn.disabled = true;
         submitBtn.textContent = 'Enviando…';
@@ -44,7 +45,7 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
             const res = await fetch(API_URL, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ nombre, comentario }),
+                body: JSON.stringify({ nombre, vine_por: vinePor, comentario }),
             });
             if (!res.ok) throw new Error(`status ${res.status}`);
             form.hidden = true;
