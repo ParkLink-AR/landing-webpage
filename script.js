@@ -69,7 +69,12 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
     if (!sessionStorage.getItem('parklink_feedback_seen')) {
         sessionStorage.setItem('parklink_feedback_seen', '1');
-        setTimeout(open, 700);
+        const openAfterLoad = () => setTimeout(open, 400);
+        if (document.getElementById('preloader')) {
+            document.addEventListener('preloader:done', openAfterLoad, { once: true });
+        } else {
+            openAfterLoad();
+        }
     }
 })();
 

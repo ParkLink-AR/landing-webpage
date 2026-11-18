@@ -534,6 +534,7 @@ if (preloader) {
         setTimeout(() => {
             preloader.classList.add('is-done');
             document.documentElement.classList.remove('is-loading');
+            document.dispatchEvent(new Event('preloader:done'));
             setTimeout(() => preloader.remove(), 1000);
         }, Math.max(0, 900 - (performance.now() - start)));
     };
