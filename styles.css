@@ -833,6 +833,10 @@ footer::before {
     position: relative;
     width: 100%;
     max-width: 380px;
+    max-height: calc(100vh - 40px);
+    max-height: calc(100dvh - 40px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     background: white;
     border-radius: 16px;
     padding: 34px 26px 28px;
