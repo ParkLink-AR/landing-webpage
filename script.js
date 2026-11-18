@@ -13,7 +13,7 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
     const closeBtn = document.getElementById('feedbackClose');
     const fab = document.getElementById('feedbackTrigger');
     const submitBtn = form.querySelector('button[type="submit"]');
-    const API_URL = 'https://parklink-feedback.thiago-fer2.workers.dev/api/comments';
+    const API_URL = 'https://feedback.parklink.com.ar/api/comments';
 
     const open = () => {
         form.hidden = false;

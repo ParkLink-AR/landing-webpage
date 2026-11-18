@@ -3,7 +3,7 @@
 Worker + D1 que recibe los comentarios del popup "Dejar un comentario" de la landing
 (pensado para el día de la presentación: QR → sitio → modal de agradecimiento + feedback).
 
-- API: `https://parklink-feedback.thiago-fer2.workers.dev`
+- API: `https://feedback.parklink.com.ar`
 - `POST /api/comments` — body `{ "nombre": "...", "comentario": "..." }`. Público (lo usa el
   formulario del sitio).
 - `GET /api/comments` — requiere `Authorization: Bearer <ADMIN_KEY>`. Devuelve todos los
@@ -12,7 +12,7 @@ Worker + D1 que recibe los comentarios del popup "Dejar un comentario" de la lan
 ## Ver los comentarios
 
 ```bash
-curl https://parklink-feedback.thiago-fer2.workers.dev/api/comments \
+curl https://feedback.parklink.com.ar/api/comments \
   -H "Authorization: Bearer <ADMIN_KEY>"
 ```
 
