@@ -4,6 +4,67 @@ const io = new IntersectionObserver(
 );
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
+(() => {
+    const overlay = document.getElementById('feedbackOverlay');
+    const form = document.getElementById('feedbackForm');
+    if (!overlay || !form) return;
+
+    const success = document.getElementById('feedbackSuccess');
+    const closeBtn = document.getElementById('feedbackClose');
+    const fab = document.getElementById('feedbackTrigger');
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const API_URL = 'https://parklink-feedback.thiago-fer2.workers.dev/api/comments';
+
+    const open = () => {
+        form.hidden = false;
+        success.hidden = true;
+        form.reset();
+        overlay.hidden = false;
+        document.body.style.overflow = 'hidden';
+    };
+    const close = () => {
+        overlay.hidden = true;
+        document.body.style.overflow = '';
+    };
+
+    closeBtn.addEventListener('click', close);
+    fab.addEventListener('click', open);
+    overlay.addEventListener('click', e => { if (e.target === overlay) close(); });
+    addEventListener('keydown', e => { if (e.key === 'Escape' && !overlay.hidden) close(); });
+
+    form.addEventListener('submit', async e => {
+        e.preventDefault();
+        const nombre = form.nombre.value.trim();
+        const comentario = form.comentario.value.trim();
+        if (!nombre || !comentario) return;
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Enviando…';
+        try {
+            const res = await fetch(API_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ nombre, comentario }),
+            });
+            if (!res.ok) throw new Error(`status ${res.status}`);
+            form.hidden = true;
+            success.hidden = false;
+            setTimeout(close, 2200);
+        } catch (err) {
+            console.warn('[feedback] submit error:', err);
+            alert('No se pudo enviar el comentario. Probá de nuevo en un momento.');
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Enviar comentario';
+        }
+    });
+
+    if (!sessionStorage.getItem('parklink_feedback_seen')) {
+        sessionStorage.setItem('parklink_feedback_seen', '1');
+        setTimeout(open, 700);
+    }
+})();
+
 const navEl = document.querySelector('nav');
 const heroLogo = document.querySelector('.hero-logo');
 if (navEl && heroLogo) {

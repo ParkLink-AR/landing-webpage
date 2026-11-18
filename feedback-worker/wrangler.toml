@@ -1,0 +1,11 @@
+name = "parklink-feedback"
+main = "src/index.js"
+compatibility_date = "2024-11-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "parklink-feedback"
+database_id = "e695cd72-4bbc-4a5d-ba2c-732e8e3ba181"
+
+[vars]
+ALLOWED_ORIGINS = "https://www.parklink.com.ar,https://parklink.com.ar,https://parklink-ar.github.io"
