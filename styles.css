@@ -823,8 +823,11 @@ footer::before {
     align-items: center;
     justify-content: center;
     padding: 20px;
+    opacity: 0;
+    transition: opacity 0.28s ease;
 }
 .feedback-overlay[hidden] { display: none; }
+.feedback-overlay.is-open { opacity: 1; }
 
 .feedback-modal {
     position: relative;
@@ -835,7 +838,10 @@ footer::before {
     padding: 34px 26px 28px;
     text-align: center;
     box-shadow: 0 24px 60px rgba(3,33,82,0.3);
+    transform: translateY(10px) scale(0.97);
+    transition: transform 0.28s ease;
 }
+.feedback-overlay.is-open .feedback-modal { transform: translateY(0) scale(1); }
 .feedback-close {
     position: absolute;
     top: 14px;

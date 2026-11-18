@@ -22,10 +22,12 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
         if (window.turnstile) turnstile.reset();
         overlay.hidden = false;
         document.body.style.overflow = 'hidden';
+        requestAnimationFrame(() => requestAnimationFrame(() => overlay.classList.add('is-open')));
     };
     const close = () => {
-        overlay.hidden = true;
+        overlay.classList.remove('is-open');
         document.body.style.overflow = '';
+        setTimeout(() => { overlay.hidden = true; }, 250);
     };
 
     closeBtn.addEventListener('click', close);
@@ -69,7 +71,7 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
     if (!sessionStorage.getItem('parklink_feedback_seen')) {
         sessionStorage.setItem('parklink_feedback_seen', '1');
-        const openAfterLoad = () => setTimeout(open, 400);
+        const openAfterLoad = () => setTimeout(open, 900);
         if (document.getElementById('preloader')) {
             document.addEventListener('preloader:done', openAfterLoad, { once: true });
         } else {
