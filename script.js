@@ -56,6 +56,7 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
                 body: JSON.stringify({ nombre, vine_por: vinePor, comentario, turnstileToken }),
             });
             if (!res.ok) throw new Error(`status ${res.status}`);
+            localStorage.setItem('parklink_feedback_submitted', '1');
             form.hidden = true;
             success.hidden = false;
             setTimeout(close, 2200);
@@ -69,8 +70,7 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
         }
     });
 
-    if (!sessionStorage.getItem('parklink_feedback_seen')) {
-        sessionStorage.setItem('parklink_feedback_seen', '1');
+    if (!localStorage.getItem('parklink_feedback_submitted')) {
         const openAfterLoad = () => setTimeout(open, 900);
         if (document.getElementById('preloader')) {
             document.addEventListener('preloader:done', openAfterLoad, { once: true });
