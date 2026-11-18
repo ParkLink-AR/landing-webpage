@@ -86,7 +86,7 @@ async function sendDigest(env) {
             'Accept': 'application/json',
         },
         body: JSON.stringify({
-            sender: { name: env.DIGEST_SENDER, email: env.DIGEST_SENDER },
+            sender: { email: env.DIGEST_SENDER },
             to: recipients,
             subject: `ParkLink — ${rows.length} comentario(s) nuevo(s) de la presentación`,
             htmlContent: html,
