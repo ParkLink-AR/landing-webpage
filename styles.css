@@ -940,13 +940,48 @@ footer::before {
     border-color: var(--teal);
     background: rgba(22,139,141,0.06);
 }
-.feedback-check input { width: 16px; height: 16px; accent-color: var(--teal); flex-shrink: 0; }
-.feedback-form .btn {
+.feedback-check input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    flex-shrink: 0;
+    border: 1.5px solid var(--border);
+    border-radius: 5px;
+    background: white;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+}
+.feedback-check input[type="checkbox"]:checked {
+    background: var(--teal);
+    border-color: var(--teal);
+}
+.feedback-check input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+.feedback-form button.btn {
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    outline: none;
+    font-family: var(--font-body, 'Inter', sans-serif);
+    cursor: pointer;
     margin-top: 2px;
     width: 100%;
     justify-content: center;
 }
-.feedback-form .btn:disabled { opacity: 0.6; cursor: default; }
+.feedback-form button.btn:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+.feedback-form button.btn:disabled { opacity: 0.6; cursor: default; }
 
 #feedbackForm[hidden], #feedbackSuccess[hidden] { display: none; }
 

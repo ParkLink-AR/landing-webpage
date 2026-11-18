@@ -18,6 +18,26 @@ function json(data, status, headers) {
     });
 }
 
+async function verifyTurnstile(token, env, request) {
+    if (!token) return false;
+    const form = new FormData();
+    form.append('secret', env.TURNSTILE_SECRET_KEY);
+    form.append('response', token);
+    const ip = request.headers.get('CF-Connecting-IP');
+    if (ip) form.append('remoteip', ip);
+
+    try {
+        const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+            method: 'POST',
+            body: form,
+        });
+        const data = await res.json();
+        return data.success === true;
+    } catch {
+        return false;
+    }
+}
+
 function escapeHtml(s) {
     return s.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 }
@@ -112,6 +132,11 @@ export default {
             const vinePorValid = vinePor.length > 0 && vinePor.every(v => TEAM.includes(v));
             if (!nombre || !comentario || !vinePorValid) {
                 return json({ error: 'Faltan datos o "vine_por" inválido' }, 400, cors);
+            }
+
+            const turnstileOk = await verifyTurnstile(String(body.turnstileToken || ''), env, request);
+            if (!turnstileOk) {
+                return json({ error: 'Verificación anti-spam fallida' }, 403, cors);
             }
 
             await env.DB.prepare(

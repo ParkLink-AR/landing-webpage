@@ -19,6 +19,7 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
         form.hidden = false;
         success.hidden = true;
         form.reset();
+        if (window.turnstile) turnstile.reset();
         overlay.hidden = false;
         document.body.style.overflow = 'hidden';
     };
@@ -37,7 +38,12 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
         const nombre = form.nombre.value.trim();
         const vinePor = [...form.querySelectorAll('input[name="vine_por"]:checked')].map(el => el.value);
         const comentario = form.comentario.value.trim();
+        const turnstileToken = form.querySelector('[name="cf-turnstile-response"]')?.value || '';
         if (!nombre || !vinePor.length || !comentario) return;
+        if (!turnstileToken) {
+            alert('Esperá un segundo a que termine de cargar la verificación y probá de nuevo.');
+            return;
+        }
 
         submitBtn.disabled = true;
         submitBtn.textContent = 'Enviando…';
@@ -45,7 +51,7 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
             const res = await fetch(API_URL, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ nombre, vine_por: vinePor, comentario }),
+                body: JSON.stringify({ nombre, vine_por: vinePor, comentario, turnstileToken }),
             });
             if (!res.ok) throw new Error(`status ${res.status}`);
             form.hidden = true;
@@ -54,6 +60,7 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
         } catch (err) {
             console.warn('[feedback] submit error:', err);
             alert('No se pudo enviar el comentario. Probá de nuevo en un momento.');
+            if (window.turnstile) turnstile.reset();
         } finally {
             submitBtn.disabled = false;
             submitBtn.textContent = 'Enviar comentario';
