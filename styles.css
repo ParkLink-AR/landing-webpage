@@ -968,6 +968,7 @@ footer::before {
     background-position: center;
     background-size: 12px 12px;
 }
+.cf-turnstile, .cf-turnstile iframe { width: 100%; }
 .feedback-form button.btn {
     appearance: none;
     -webkit-appearance: none;
